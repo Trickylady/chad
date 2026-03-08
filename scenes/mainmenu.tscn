@@ -1,0 +1,232 @@
+[gd_scene load_steps=20 format=3 uid="uid://sti5ab1jkyy3"]
+
+[ext_resource type="Script" uid="uid://crtquveixgft1" path="res://mainmenu.gd" id="1_fsdjo"]
+[ext_resource type="Texture2D" uid="uid://f1hnr7xkha8y" path="res://images/menu-UI/menubg.png" id="1_s5g8n"]
+[ext_resource type="Texture2D" uid="uid://b25145tn7rap5" path="res://images/menu-UI/logo1.png" id="2_7yvfd"]
+[ext_resource type="Texture2D" uid="uid://ko0tv3qle8o2" path="res://images/menu-UI/logo2.png" id="3_dfy5j"]
+[ext_resource type="Texture2D" uid="uid://b6gn20eyku3v8" path="res://images/menu-UI/menu_tab_bg.png" id="3_prb5i"]
+[ext_resource type="Texture2D" uid="uid://c534bfbo12qrf" path="res://images/menu-UI/logo3.png" id="4_85riq"]
+[ext_resource type="Texture2D" uid="uid://wqfys4ql5cwj" path="res://images/menu-UI/logo4.png" id="5_wf3n4"]
+[ext_resource type="Texture2D" uid="uid://bhp351vs6jovo" path="res://images/menu-UI/but_start.png" id="6_wf3n4"]
+[ext_resource type="Texture2D" uid="uid://bajx3frf32wf4" path="res://images/menu-UI/but_settings.png" id="7_h73c4"]
+[ext_resource type="Texture2D" uid="uid://datsiu5ovltu7" path="res://images/menu-UI/but_start_hover.png" id="7_uui5l"]
+[ext_resource type="Texture2D" uid="uid://dgrry02rgkey8" path="res://images/menu-UI/but_credits.png" id="8_uui5l"]
+[ext_resource type="Texture2D" uid="uid://csxixbshplw4s" path="res://images/menu-UI/but_exit.png" id="9_4hago"]
+[ext_resource type="Texture2D" uid="uid://d01lb4icbg57g" path="res://images/menu-UI/but_settings_hov.png" id="9_gjjcl"]
+[ext_resource type="Texture2D" uid="uid://bbtj1o43ti02t" path="res://images/menu-UI/but_credits_hov.png" id="11_kait0"]
+[ext_resource type="Texture2D" uid="uid://brebdhnf58bkx" path="res://images/menu-UI/but_exit_hov.png" id="13_6pj40"]
+[ext_resource type="Texture2D" uid="uid://cry2oft1eccgo" path="res://images/menu-UI/but_back.png" id="14_6pj40"]
+[ext_resource type="Texture2D" uid="uid://bo0rxnif6bdvo" path="res://images/menu-UI/but_back_hov.png" id="15_nkpmc"]
+[ext_resource type="Theme" uid="uid://bnudt8xyp2jkf" path="res://themes/maintheme.tres" id="18_prb5i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h73c4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7yvfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dfy5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_85riq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wf3n4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="mainmenu" type="Node2D"]
+script = ExtResource("1_fsdjo")
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_s5g8n")
+
+[node name="tabbg" type="TextureRect" parent="."]
+offset_left = 870.0
+offset_top = 97.0
+offset_right = 1849.0
+offset_bottom = 982.0
+texture = ExtResource("3_prb5i")
+
+[node name="logo" type="AnimatedSprite2D" parent="."]
+position = Vector2(407, 385)
+sprite_frames = SubResource("SpriteFrames_h73c4")
+autoplay = "default"
+frame_progress = 0.6424372
+
+[node name="ButBack" type="TextureButton" parent="." groups=["hover_left"]]
+offset_left = 1457.0
+offset_top = 918.00006
+offset_right = 1897.0
+offset_bottom = 1084.0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(349.33325, 13.333252)
+texture_normal = ExtResource("14_6pj40")
+texture_pressed = ExtResource("15_nkpmc")
+texture_hover = ExtResource("15_nkpmc")
+
+[node name="buttons" type="Node2D" parent="."]
+visible = false
+
+[node name="ButStart" type="TextureButton" parent="buttons" groups=["hover_right"]]
+offset_left = 1118.0
+offset_top = 286.0
+offset_right = 1627.0
+offset_bottom = 484.0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(57.481445, 4.148163)
+texture_normal = ExtResource("6_wf3n4")
+texture_pressed = ExtResource("7_uui5l")
+texture_hover = ExtResource("7_uui5l")
+
+[node name="ButSettings" type="TextureButton" parent="buttons" groups=["hover_left"]]
+offset_left = 915.99994
+offset_top = 450.0
+offset_right = 1562.0
+offset_bottom = 682.0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(625.33325, 26.666626)
+texture_normal = ExtResource("7_h73c4")
+texture_pressed = ExtResource("9_gjjcl")
+texture_hover = ExtResource("9_gjjcl")
+
+[node name="ButCredits" type="TextureButton" parent="buttons" groups=["hover_right"]]
+offset_left = 1100.0
+offset_top = 664.0
+offset_right = 1629.0
+offset_bottom = 865.0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(-1.333374, 15.555542)
+texture_normal = ExtResource("8_uui5l")
+texture_pressed = ExtResource("11_kait0")
+texture_hover = ExtResource("11_kait0")
+
+[node name="ButExit" type="TextureButton" parent="buttons" groups=["hover_right"]]
+offset_left = 1611.0
+offset_top = 937.0
+offset_right = 1953.0
+offset_bottom = 1089.0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(27.555664, -1.333374)
+texture_normal = ExtResource("9_4hago")
+texture_pressed = ExtResource("13_6pj40")
+texture_hover = ExtResource("13_6pj40")
+
+[node name="CreditsTab" type="Node2D" parent="."]
+visible = false
+
+[node name="creditstext" type="RichTextLabel" parent="CreditsTab"]
+offset_left = 923.3388
+offset_top = 327.1694
+offset_right = 1736.3533
+offset_bottom = 929.93335
+rotation = -0.11908686
+theme = ExtResource("18_prb5i")
+bbcode_enabled = true
+text = "Art & Animation
+[font_size=40]Trickylady[/font_size]
+
+Code
+[font_size=40]Trickylady[/font_size]
+
+Music & SFX
+[font_size=40]Pixabay[/font_size]"
+
+[node name="Credits" type="Label" parent="CreditsTab"]
+offset_left = 1474.9999
+offset_top = 166.0
+offset_right = 1744.9999
+offset_bottom = 256.0
+rotation = -0.11492607
+size_flags_horizontal = 0
+theme = ExtResource("18_prb5i")
+text = "Credits."
+
+[node name="SettingsTab" type="Node2D" parent="."]
+
+[node name="Master" type="RichTextLabel" parent="SettingsTab"]
+offset_left = 923.3388
+offset_top = 327.1694
+offset_right = 1736.3533
+offset_bottom = 397.14392
+rotation = -0.11908686
+theme = ExtResource("18_prb5i")
+bbcode_enabled = true
+text = "Master"
+
+[node name="Master_slider" type="HSlider" parent="SettingsTab"]
+offset_left = 945.0
+offset_top = 414.0
+offset_right = 1709.0
+offset_bottom = 474.0
+rotation = -0.11978197
+theme = ExtResource("18_prb5i")
+max_value = 1.0
+step = 0.01
+
+[node name="Music" type="RichTextLabel" parent="SettingsTab"]
+offset_left = 948.0
+offset_top = 524.0
+offset_right = 1761.0144
+offset_bottom = 593.9745
+rotation = -0.11908686
+theme = ExtResource("18_prb5i")
+bbcode_enabled = true
+text = "Music"
+
+[node name="Music_slider" type="HSlider" parent="SettingsTab"]
+offset_left = 966.00006
+offset_top = 623.00006
+offset_right = 1730.0
+offset_bottom = 683.00006
+rotation = -0.11978197
+theme = ExtResource("18_prb5i")
+theme_type_variation = &"music_slider"
+max_value = 1.0
+step = 0.01
+
+[node name="SFX" type="RichTextLabel" parent="SettingsTab"]
+offset_left = 977.00006
+offset_top = 735.00006
+offset_right = 1790.0144
+offset_bottom = 804.97455
+rotation = -0.11908686
+theme = ExtResource("18_prb5i")
+bbcode_enabled = true
+text = "SFX"
+
+[node name="SFX_slider" type="HSlider" parent="SettingsTab"]
+offset_left = 995.00006
+offset_top = 824.00006
+offset_right = 1759.0
+offset_bottom = 884.00006
+rotation = -0.11978197
+theme = ExtResource("18_prb5i")
+theme_type_variation = &"SFX_slider"
+max_value = 1.0
+step = 0.01
+
+[node name="Settings" type="Label" parent="SettingsTab"]
+offset_left = 1474.9999
+offset_top = 166.0
+offset_right = 1744.9999
+offset_bottom = 256.0
+rotation = -0.11492607
+size_flags_horizontal = 0
+theme = ExtResource("18_prb5i")
+text = "Settings."
+
+[connection signal="pressed" from="ButBack" to="." method="_on_but_back_pressed"]
+[connection signal="pressed" from="buttons/ButStart" to="." method="_on_but_start_pressed"]
+[connection signal="pressed" from="buttons/ButSettings" to="." method="_on_but_settings_pressed"]
+[connection signal="pressed" from="buttons/ButCredits" to="." method="_on_but_credits_pressed"]
+[connection signal="pressed" from="buttons/ButExit" to="." method="_on_but_exit_pressed"]
+[connection signal="value_changed" from="SettingsTab/Master_slider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="SettingsTab/Music_slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SettingsTab/SFX_slider" to="." method="_on_sfx_slider_value_changed"]

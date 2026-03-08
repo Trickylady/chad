@@ -1,0 +1,37 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://bnudt8xyp2jkf"]
+
+[ext_resource type="Texture2D" uid="uid://bk715nc7nl86c" path="res://images/menu-UI/grabber1.png" id="1_12cw0"]
+[ext_resource type="FontFile" uid="uid://v2thi4evkbvs" path="res://fonts/ampersand.ttf" id="1_wn0ed"]
+[ext_resource type="Texture2D" uid="uid://b8oi2mq5kewd3" path="res://images/menu-UI/musuc_slider.png" id="2_qbr7o"]
+[ext_resource type="Texture2D" uid="uid://i4x8memdosua" path="res://images/menu-UI/grabber3.png" id="4_jejfc"]
+[ext_resource type="Texture2D" uid="uid://7a7nfo3nflrx" path="res://images/menu-UI/grabber2.png" id="5_ajcp3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_12cw0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qbr7o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jejfc"]
+texture = ExtResource("2_qbr7o")
+texture_margin_top = 8.0
+
+[resource]
+HSlider/icons/grabber = ExtResource("1_12cw0")
+HSlider/icons/grabber_disabled = ExtResource("1_12cw0")
+HSlider/icons/grabber_highlight = ExtResource("1_12cw0")
+HSlider/styles/grabber_area = SubResource("StyleBoxEmpty_12cw0")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_qbr7o")
+HSlider/styles/slider = SubResource("StyleBoxTexture_jejfc")
+Label/colors/font_color = Color(0.8235294, 0.36862746, 0.4117647, 1)
+Label/font_sizes/font_size = 80
+Label/fonts/font = ExtResource("1_wn0ed")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/font_sizes/normal_font_size = 57
+RichTextLabel/fonts/normal_font = ExtResource("1_wn0ed")
+SFX_slider/base_type = &"HSlider"
+SFX_slider/icons/grabber = ExtResource("4_jejfc")
+SFX_slider/icons/grabber_disabled = ExtResource("4_jejfc")
+SFX_slider/icons/grabber_highlight = ExtResource("4_jejfc")
+music_slider/base_type = &"HSlider"
+music_slider/icons/grabber = ExtResource("5_ajcp3")
+music_slider/icons/grabber_disabled = ExtResource("5_ajcp3")
+music_slider/icons/grabber_highlight = ExtResource("5_ajcp3")
