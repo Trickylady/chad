@@ -5,7 +5,7 @@ func _ready() -> void:
 	Input.set_custom_mouse_cursor(mouseimg)
 
 func go_to_menu():
-	get_tree().change_scene_to_file("res://mainmenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
 
 func start_game():
-	get_tree().change_scene_to_file("res://chad.tscn")
+	get_tree().change_scene_to_file("res://scenes/gamechad.tscn")

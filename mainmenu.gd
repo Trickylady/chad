@@ -47,7 +47,7 @@ func _on_but_settings_pressed() -> void:
 	$tabbg.show()
 
 func _on_but_start_pressed() -> void:
-	pass # Replace with function body.
+	Mng.start_game()
 
 func _on_but_back_pressed() -> void:
 	$buttons.show()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dku1iree58omq"]
+[gd_scene load_steps=35 format=3 uid="uid://dku1iree58omq"]
 
 [ext_resource type="Texture2D" uid="uid://cmeawq7mwoc8n" path="res://images/chad/rightarm.png" id="1_btj17"]
 [ext_resource type="Texture2D" uid="uid://i1bqucse3fql" path="res://images/chad/legs/leftfoot.png" id="2_4b2js"]
@@ -18,7 +18,16 @@
 [ext_resource type="Texture2D" uid="uid://hjfto1pwe18f" path="res://images/chad/face/eyeball.png" id="13_fq166"]
 [ext_resource type="Texture2D" uid="uid://di1jswe76ltrm" path="res://images/chad/face/eyebrow_left.png" id="14_qpa3q"]
 [ext_resource type="Texture2D" uid="uid://hk1wiiqivogf" path="res://images/chad/face/eyebrow_right.png" id="15_jb5ah"]
+[ext_resource type="Script" uid="uid://72vafw3fvjov" path="res://scripts/hairstyles.gd" id="18_tt4ac"]
 [ext_resource type="Texture2D" uid="uid://v1l77bwqqqv1" path="res://images/chad/face/hair/hair9a.png" id="19_fq166"]
+[ext_resource type="Texture2D" uid="uid://dgrscbmhlmilq" path="res://images/chad/face/hair/hair1.png" id="20_did8q"]
+[ext_resource type="Texture2D" uid="uid://4p6itxnkwmqj" path="res://images/chad/face/hair/hair2.png" id="21_tt4ac"]
+[ext_resource type="Texture2D" uid="uid://dtx1pyj1vird2" path="res://images/chad/face/hair/hair3.png" id="22_1kov8"]
+[ext_resource type="Texture2D" uid="uid://54st2q52mkdx" path="res://images/chad/face/hair/hair4.png" id="23_10vyd"]
+[ext_resource type="Texture2D" uid="uid://cbgpkaj4uxc14" path="res://images/chad/face/hair/hair5.png" id="24_gebft"]
+[ext_resource type="Texture2D" uid="uid://8d4yxyl14pi" path="res://images/chad/face/hair/hair6.png" id="25_skace"]
+[ext_resource type="Texture2D" uid="uid://bws7asi7k0afb" path="res://images/chad/face/hair/hair7.png" id="26_ehoi3"]
+[ext_resource type="Texture2D" uid="uid://cjdgmmtvcyle6" path="res://images/chad/face/hair/hair8.png" id="27_nxqc0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h8rah"]
 animations = [{
@@ -42,24 +51,64 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_h8rah"]
+[sub_resource type="Animation" id="Animation_tt4ac"]
+resource_name = "Rightlegup"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../rightleg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(12.430012, 219.66907), Vector2(70, 229.87)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../rightleg:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.2217305]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../Chadbody/Leftarm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.17453292]
+}
+
+[sub_resource type="Animation" id="Animation_1kov8"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Chadbody:rotation")
+tracks/0/path = NodePath("../rightleg:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Vector2(12.430012, 219.66907)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Chadbody/Rightarm:rotation")
+tracks/1/path = NodePath("../rightleg:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -71,235 +120,65 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("legs/rightleg:position")
+tracks/2/path = NodePath("../../Chadbody/Leftarm:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.34236717, 241.2071)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("legs/rightleg:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("legs/leftleg:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-129.62378, 244.78287)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("legs/leftleg:rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Chadbody:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(12.000002, -783.00006)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Chadbody/face:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.04652365]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Chadbody/Leftarm:rotation")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
 "values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_s7wk6"]
-resource_name = "idle"
-length = 6.0
+[sub_resource type="Animation" id="Animation_10vyd"]
+resource_name = "shouldersright"
+
+[sub_resource type="Animation" id="Animation_gebft"]
+resource_name = "idlerightup"
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Chadbody:rotation")
+tracks/0/path = NodePath("../rightleg:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3, 5.98),
+"times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.05235987755982989, -0.05235987755982989, 0.05235987755982989]
+"values": [-1.2217305, -1.3089969, -1.2217305]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Chadbody/Rightarm:rotation")
+tracks/1/path = NodePath("../rightleg:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3, 6),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 0.17453292, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_et1py"]
-resource_name = "step"
-length = 1.2
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("legs/leftleg:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-129.62378, 244.78287), Vector2(-129.62378, 244.78287), Vector2(-129.62378, 244.78287), Vector2(-129.62378, 244.78287), Vector2(-129.62378, 244.78287)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("legs/leftleg:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.5627696, 0.0, -0.7625259, 0.0]
+"values": [Vector2(70, 219.669), Vector2(70, 219.669)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("legs/rightleg:position")
+tracks/2/path = NodePath("../../Chadbody/Leftarm:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(0.34236717, 241.2071), Vector2(0.34236717, 241.2071), Vector2(0.34236717, 241.2071), Vector2(0.34236717, 241.2071), Vector2(0.34236717, 241.2071)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("legs/rightleg:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -0.85742277, 0.0, 0.82199323, 0.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Chadbody:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -0.14987208, 0.0, -0.14987208, 0.0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Chadbody:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(12.000002, -783.00006), Vector2(12.000002, -783.00006)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Chadbody/face:rotation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [-0.04652365, 0.34906584, -0.04652365, 0.34906584, -0.04652365]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Chadbody/Rightarm:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.32347098, 0.0, -0.5923871, 0.0]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Chadbody/Leftarm:rotation")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -0.39011133, 0.0, 1.1680046, 0.0]
+"values": [-0.17453292, -0.10471976, -0.17453292]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_h8rah"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_skace"]
 _data = {
-&"RESET": SubResource("Animation_h8rah"),
-&"idle": SubResource("Animation_s7wk6"),
-&"step": SubResource("Animation_et1py")
+&"RESET": SubResource("Animation_1kov8"),
+&"Rightlegup": SubResource("Animation_tt4ac"),
+&"idlerightup": SubResource("Animation_gebft"),
+&"shouldersright": SubResource("Animation_10vyd")
 }
 
 [node name="chad" type="Node2D"]
@@ -309,7 +188,7 @@ position = Vector2(-64, -601)
 rotation = 0.04288938
 
 [node name="leftleg" type="Node2D" parent="legs"]
-position = Vector2(-129.62378, 244.78287)
+position = Vector2(-131.51038, 200.82335)
 
 [node name="Leftfoot" type="Sprite2D" parent="legs/leftleg"]
 position = Vector2(110.15651, 217.86067)
@@ -322,10 +201,10 @@ rotation = -0.04288938
 texture = ExtResource("3_umdmt")
 
 [node name="rightleg" type="Node2D" parent="legs"]
-position = Vector2(0.34236717, 241.2071)
+position = Vector2(12.430012, 219.66907)
 
 [node name="Rightfoot" type="Sprite2D" parent="legs/rightleg"]
-position = Vector2(109.82689, 210.87831)
+position = Vector2(110, 210.878)
 rotation = -0.04288938
 texture = ExtResource("4_hl1ba")
 
@@ -335,39 +214,34 @@ rotation = -0.04288938
 texture = ExtResource("3_umdmt")
 
 [node name="Chadbody" type="Node2D" parent="."]
-position = Vector2(12.000002, -783.00006)
+position = Vector2(-88, -340)
 
 [node name="Leftarm" type="Sprite2D" parent="Chadbody"]
-position = Vector2(-59, 62.00006)
+position = Vector2(65.5, -74.40466)
 texture = ExtResource("7_hub2n")
-offset = Vector2(124.205536, 127.95331)
+offset = Vector2(148.54929, -188.62912)
 
 [node name="Body" type="Sprite2D" parent="Chadbody"]
-position = Vector2(-102.334045, 162.90479)
+position = Vector2(65.5, -74.40466)
 texture = ExtResource("5_5mr2m")
+offset = Vector2(-73.334045, -215.09528)
 
 [node name="Rightarm" type="Sprite2D" parent="Chadbody"]
-position = Vector2(-135.49283, -18.065552)
+position = Vector2(65.5, -74.40466)
 texture = ExtResource("1_btj17")
-offset = Vector2(-76.30165, 213.01892)
+offset = Vector2(-182.79448, -183.04669)
 
 [node name="Capes" type="AnimatedSprite2D" parent="Chadbody"]
-position = Vector2(-368.79446, 232.95337)
+position = Vector2(65.5, -74.40466)
 sprite_frames = SubResource("SpriteFrames_h8rah")
 animation = &"cape"
 frame_progress = 0.046496324
+offset = Vector2(-329, -159)
 
 [node name="face" type="Node2D" parent="Chadbody"]
-position = Vector2(-154, -135.99995)
+position = Vector2(-56.499992, -572.4047)
 rotation = -0.04652365
 scale = Vector2(0.9999998, 0.9999998)
-
-[node name="hairbottom" type="Sprite2D" parent="Chadbody/face"]
-z_index = -1
-position = Vector2(46.112785, -120.52521)
-rotation = 0.04652364
-scale = Vector2(1.0000006, 1.0000006)
-texture = ExtResource("4_h8rah")
 
 [node name="Head" type="Sprite2D" parent="Chadbody/face"]
 position = Vector2(3.1382446, -119.82397)
@@ -409,11 +283,62 @@ texture = ExtResource("14_qpa3q")
 position = Vector2(111.34378, -205.87057)
 texture = ExtResource("15_jb5ah")
 
-[node name="hairtop" type="Sprite2D" parent="Chadbody/face"]
-position = Vector2(45.34378, -274.87057)
+[node name="hairstyles" type="Node2D" parent="Chadbody/face"]
+position = Vector2(45.34377, -274.87054)
+script = ExtResource("18_tt4ac")
+
+[node name="Long" type="Sprite2D" parent="Chadbody/face/hairstyles"]
+position = Vector2(1.656235, 6.8704844)
 texture = ExtResource("19_fq166")
 
-[node name="APchad" type="AnimationPlayer" parent="."]
+[node name="hair1back" type="Sprite2D" parent="Chadbody/face/hairstyles/Long"]
+z_index = -1
+position = Vector2(5.656224, 156.87048)
+texture = ExtResource("4_h8rah")
+
+[node name="Bald" type="Sprite2D" parent="Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(-1.8204613, 6.604126)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("20_did8q")
+
+[node name="Fuchsia" type="Sprite2D" parent="Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(-0.34376526, 2.8704834)
+texture = ExtResource("21_tt4ac")
+
+[node name="Curly" type="Sprite2D" parent="Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(1.6562352, 24.870483)
+texture = ExtResource("22_1kov8")
+
+[node name="Bowl" type="Sprite2D" parent="Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(0.65623474, -0.1295166)
+texture = ExtResource("23_10vyd")
+
+[node name="Fringe" type="Sprite2D" parent="Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(0.65623474, 5.8704834)
+texture = ExtResource("24_gebft")
+
+[node name="Elvis" type="Sprite2D" parent="Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(-1.3437653, 16.870483)
+texture = ExtResource("25_skace")
+
+[node name="Blond" type="Sprite2D" parent="Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(-1.3437655, 14.870483)
+texture = ExtResource("26_ehoi3")
+
+[node name="Mohawk" type="Sprite2D" parent="Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(-1.3437653, 9.870483)
+texture = ExtResource("27_nxqc0")
+
+[node name="APChad" type="AnimationPlayer" parent="Chadbody/face"]
+root_node = NodePath("../../../legs/leftleg")
 libraries = {
-&"": SubResource("AnimationLibrary_h8rah")
+&"": SubResource("AnimationLibrary_skace")
 }
