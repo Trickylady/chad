@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://caxjtvg8vkevc"
+path="res://.godot/imported/music-for-videos-dance-dont-stop-electro-swing-150385.mp3-d389d9413c9ec0b64876059d63e389da.mp3str"
+
+[deps]
+
+source_file="res://arcade game/arcade3/music-for-videos-dance-dont-stop-electro-swing-150385.mp3"
+dest_files=["res://.godot/imported/music-for-videos-dance-dont-stop-electro-swing-150385.mp3-d389d9413c9ec0b64876059d63e389da.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bcaabfbsr23pp"
+path="res://.godot/imported/music-for-videos-night-walk-electro-swing-150386.mp3-de6ff7135f1489a77ebc7a83b2a8c334.mp3str"
+
+[deps]
+
+source_file="res://arcade game/arcade5/music-for-videos-night-walk-electro-swing-150386.mp3"
+dest_files=["res://.godot/imported/music-for-videos-night-walk-electro-swing-150386.mp3-de6ff7135f1489a77ebc7a83b2a8c334.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
