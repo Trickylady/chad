@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dc3jm36tskxoi"
+path="res://.godot/imported/immersing-into-electro-swing-152574.mp3-3c777b152282709ac4cfe7f4b0b0dbcb.mp3str"
+
+[deps]
+
+source_file="res://arcade game/arcade2/immersing-into-electro-swing-152574.mp3"
+dest_files=["res://.godot/imported/immersing-into-electro-swing-152574.mp3-3c777b152282709ac4cfe7f4b0b0dbcb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

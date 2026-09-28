@@ -1,11 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://bml32irxgeiu7"]
+[gd_scene load_steps=12 format=3 uid="uid://bml32irxgeiu7"]
 
+[ext_resource type="Script" uid="uid://c1lt7nbqhistm" path="res://scripts/Arcade2/collect_game.gd" id="1_firqu"]
 [ext_resource type="Texture2D" uid="uid://c6pgikccqi4ui" path="res://arcade game/arcade2/imgarcade2/bg-arcade2.png" id="1_psncv"]
 [ext_resource type="Texture2D" uid="uid://b8gbatl4djw7" path="res://arcade game/arcade2/imgarcade2/flowers.png" id="2_lh2y3"]
+[ext_resource type="JSON" path="res://arcade game/arcade2/test_music_beatmap.json" id="2_slv7c"]
+[ext_resource type="PackedScene" uid="uid://dfto688imvnwm" path="res://arcade game/arcade2/bumblebee.tscn" id="2_wbv1c"]
+[ext_resource type="AudioStream" uid="uid://dc3jm36tskxoi" path="res://arcade game/arcade2/immersing-into-electro-swing-152574.mp3" id="2_wfygq"]
 [ext_resource type="Texture2D" uid="uid://b3f6vj4j7efwr" path="res://arcade game/arcade2/imgarcade2/area-arcade2.png" id="3_firqu"]
+[ext_resource type="PackedScene" uid="uid://rjg0lumxy0bo" path="res://arcade game/arcade2/honeybee.tscn" id="3_slv7c"]
 [ext_resource type="PackedScene" uid="uid://bipqk25swnamv" path="res://arcade game/arcade2/net.tscn" id="4_lh2y3"]
+[ext_resource type="PackedScene" uid="uid://b127kbu00ac05" path="res://arcade game/arcade2/asianhornet.tscn" id="4_wfygq"]
+[ext_resource type="PackedScene" uid="uid://00bsen0o6cxl" path="res://arcade game/arcade2/hoverfly.tscn" id="5_xikv6"]
 
 [node name="Arcade2" type="Node2D"]
+script = ExtResource("1_firqu")
+MusicToPlay = ExtResource("2_wfygq")
+BeatMap = ExtResource("2_slv7c")
+CorrectCollectables = Array[PackedScene]([ExtResource("2_wbv1c"), ExtResource("3_slv7c")])
+WrongCollectables = Array[PackedScene]([ExtResource("4_wfygq"), ExtResource("5_xikv6")])
 
 [node name="backgroundarcade2" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -20,11 +32,21 @@ offset_bottom = 1024.0
 texture = ExtResource("2_lh2y3")
 
 [node name="mglass" type="TextureRect" parent="."]
+z_index = 1
 offset_left = 699.0
 offset_top = 6.0
 offset_right = 2575.0
 offset_bottom = 1475.0
 texture = ExtResource("3_firqu")
 
-[node name="Net" parent="." instance=ExtResource("4_lh2y3")]
-position = Vector2(1653, 532)
+[node name="GrabPoint" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = 1
+position = Vector2(1730, 543)
+
+[node name="Net" parent="GrabPoint" instance=ExtResource("4_lh2y3")]
+position = Vector2(-85, -11)
+
+[node name="MidPoint" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1254, 541)
