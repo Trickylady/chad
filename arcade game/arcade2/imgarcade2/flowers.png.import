@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3iyw6ecnll0r"
-path="res://.godot/imported/honeybeeB.png-d050ad0000b572fb48a9f57c4f8d9639.ctex"
+uid="uid://b8gbatl4djw7"
+path="res://.godot/imported/flowers.png-1dbbc2ae5309a04784548e045754fd9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arcade game/arcade2/imgarcade2/honeybeeB.png"
-dest_files=["res://.godot/imported/honeybeeB.png-d050ad0000b572fb48a9f57c4f8d9639.ctex"]
+source_file="res://arcade game/arcade2/imgarcade2/flowers.png"
+dest_files=["res://.godot/imported/flowers.png-1dbbc2ae5309a04784548e045754fd9a.ctex"]
 
 [params]
 

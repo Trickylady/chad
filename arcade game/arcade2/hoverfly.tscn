@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://00bsen0o6cxl"]
+
+[ext_resource type="Texture2D" uid="uid://bnre4ga3mitmu" path="res://arcade game/arcade2/imgarcade2/hoverflyA.png" id="1_ehbbh"]
+[ext_resource type="Texture2D" uid="uid://b0l3byfpy82u5" path="res://arcade game/arcade2/imgarcade2/hoverflyB.png" id="2_7q2f1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qxlbe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ehbbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7q2f1")
+}],
+"loop": true,
+"name": &"hoverflymove",
+"speed": 10.0
+}]
+
+[node name="Hoverfly" type="Node2D"]
+
+[node name="hoverfly" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qxlbe")
+animation = &"hoverflymove"
+autoplay = "hoverflymove"
+frame_progress = 0.3839306

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbnhv8a0er4dl"
-path="res://.godot/imported/grabber_arcade2.png-1d3cbc8cf1466e53973277d1454704ce.ctex"
+path="res://.godot/imported/grabber_arcade2.png-65d5303904b7d6b1215e476465e34401.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arcade game/arcade2/grabber_arcade2.png"
-dest_files=["res://.godot/imported/grabber_arcade2.png-1d3cbc8cf1466e53973277d1454704ce.ctex"]
+source_file="res://arcade game/arcade2/imgarcade2/grabber_arcade2.png"
+dest_files=["res://.godot/imported/grabber_arcade2.png-65d5303904b7d6b1215e476465e34401.ctex"]
 
 [params]
 

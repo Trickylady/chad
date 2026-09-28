@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b127kbu00ac05"]
+
+[ext_resource type="Texture2D" uid="uid://cxnd1akp5k8f5" path="res://arcade game/arcade2/imgarcade2/AsianhornetA.png" id="1_25ly6"]
+[ext_resource type="Texture2D" uid="uid://cfm71kbj2eld0" path="res://arcade game/arcade2/imgarcade2/AsianhornetB.png" id="2_6yg5u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qxlbe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_25ly6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6yg5u")
+}],
+"loop": true,
+"name": &"asianhornetmove",
+"speed": 10.0
+}]
+
+[node name="Asianhornet" type="Node2D"]
+
+[node name="asianhornet" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qxlbe")
+animation = &"asianhornetmove"
+autoplay = "asianhornetmove"
+frame_progress = 0.14812443

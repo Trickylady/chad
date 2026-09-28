@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfm71kbj2eld0"
-path="res://.godot/imported/AsianhornetB.png-f30c8701953127bcef77505b23cf21f5.ctex"
+path="res://.godot/imported/AsianhornetB.png-1bb96fc1701548274bbdb93006472a83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arcade game/arcade2/AsianhornetB.png"
-dest_files=["res://.godot/imported/AsianhornetB.png-f30c8701953127bcef77505b23cf21f5.ctex"]
+source_file="res://arcade game/arcade2/imgarcade2/AsianhornetB.png"
+dest_files=["res://.godot/imported/AsianhornetB.png-1bb96fc1701548274bbdb93006472a83.ctex"]
 
 [params]
 

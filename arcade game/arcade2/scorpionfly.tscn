@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmi31bm3m00ox"]
+
+[ext_resource type="Texture2D" uid="uid://bkqarhvg7ydv3" path="res://arcade game/arcade2/imgarcade2/scorpionflyA.png" id="1_cr6m0"]
+[ext_resource type="Texture2D" uid="uid://c51vwd8ph718g" path="res://arcade game/arcade2/imgarcade2/scorpionflyB.png" id="2_h6ljo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qxlbe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cr6m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h6ljo")
+}],
+"loop": true,
+"name": &"scorpionflymove",
+"speed": 10.0
+}]
+
+[node name="Scorpionfly" type="Node2D"]
+
+[node name="scorpionfly" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qxlbe")
+animation = &"scorpionflymove"
+autoplay = "scorpionflymove"
+frame_progress = 0.8314875

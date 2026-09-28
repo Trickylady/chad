@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcx08c71ly5or"
-path="res://.godot/imported/honeybeeA.png-64470b011e3f8bcde28f2b07bf027cec.ctex"
+path="res://.godot/imported/honeybeeA.png-b28453267eaf270aacdd981dfbc8d290.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arcade game/arcade2/honeybeeA.png"
-dest_files=["res://.godot/imported/honeybeeA.png-64470b011e3f8bcde28f2b07bf027cec.ctex"]
+source_file="res://arcade game/arcade2/imgarcade2/honeybeeA.png"
+dest_files=["res://.godot/imported/honeybeeA.png-b28453267eaf270aacdd981dfbc8d290.ctex"]
 
 [params]
 

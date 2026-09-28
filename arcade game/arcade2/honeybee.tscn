@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://rjg0lumxy0bo"]
+
+[ext_resource type="Texture2D" uid="uid://dcx08c71ly5or" path="res://arcade game/arcade2/imgarcade2/honeybeeA.png" id="1_p8iic"]
+[ext_resource type="Texture2D" uid="uid://3iyw6ecnll0r" path="res://arcade game/arcade2/imgarcade2/honeybeeB.png" id="2_54n5r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qxlbe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p8iic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_54n5r")
+}],
+"loop": true,
+"name": &"honeybeemove",
+"speed": 10.0
+}]
+
+[node name="Honeybee" type="Node2D"]
+
+[node name="honeybee" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qxlbe")
+animation = &"honeybeemove"
+autoplay = "honeybeemove"
+frame_progress = 0.6139681

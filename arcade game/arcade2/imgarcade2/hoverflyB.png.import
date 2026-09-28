@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0l3byfpy82u5"
-path="res://.godot/imported/hoverflyB.png-d61abbdc91a0ecb0ff7fd150581a9eef.ctex"
+path="res://.godot/imported/hoverflyB.png-78c283bcd16c23fa15e695e254606fe4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arcade game/arcade2/hoverflyB.png"
-dest_files=["res://.godot/imported/hoverflyB.png-d61abbdc91a0ecb0ff7fd150581a9eef.ctex"]
+source_file="res://arcade game/arcade2/imgarcade2/hoverflyB.png"
+dest_files=["res://.godot/imported/hoverflyB.png-78c283bcd16c23fa15e695e254606fe4.ctex"]
 
 [params]
 

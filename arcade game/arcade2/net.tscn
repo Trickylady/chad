@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bipqk25swnamv"]
+
+[ext_resource type="Texture2D" uid="uid://bbnhv8a0er4dl" path="res://arcade game/arcade2/imgarcade2/grabber_arcade2.png" id="1_ifi4l"]
+
+[node name="Net" type="Node2D"]
+
+[node name="GrabberArcade2" type="Sprite2D" parent="."]
+position = Vector2(37, 10)
+texture = ExtResource("1_ifi4l")
