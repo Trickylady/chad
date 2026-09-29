@@ -5982,8 +5982,8 @@ advance_mode = 2
 advance_condition = &"shoulders"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r6fuh"]
-switch_mode = 2
-advance_mode = 0
+advance_mode = 2
+advance_condition = &"brain"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0xb6o"]
 switch_mode = 2
@@ -5998,15 +5998,19 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7pf30"]
 advance_mode = 2
+advance_condition = &"both"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oheq7"]
 advance_mode = 2
+advance_condition = &"shoulders"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_l2fwy"]
+switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r3dwm"]
 advance_mode = 2
+advance_condition = &"brain"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_231yb"]
 switch_mode = 2
@@ -6025,6 +6029,7 @@ switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d0ood"]
+advance_mode = 0
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bue73"]
 
@@ -6043,6 +6048,7 @@ advance_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yffie"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3qahl"]
+advance_mode = 0
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4y1ou"]
 advance_mode = 2
@@ -6067,7 +6073,7 @@ states/idleleftup/position = Vector2(2647.7842, 142)
 states/idlerightup/node = SubResource("AnimationNodeAnimation_y61ji")
 states/idlerightup/position = Vector2(1409, 142)
 states/idlewrongclickbrain/node = SubResource("AnimationNodeAnimation_lkv3e")
-states/idlewrongclickbrain/position = Vector2(709.8138, 366.21426)
+states/idlewrongclickbrain/position = Vector2(728.8138, 127.214264)
 states/idlewrongclickfoot/node = SubResource("AnimationNodeAnimation_5xy2k")
 states/idlewrongclickfoot/position = Vector2(695.8138, 586.21423)
 states/idlewrongclickshoulders/node = SubResource("AnimationNodeAnimation_r14o8")
@@ -6103,11 +6109,11 @@ states/upwrongclickfoot/position = Vector2(948.8138, 742.24927)
 states/upwrongclickshoulders/node = SubResource("AnimationNodeAnimation_r3xiu")
 states/upwrongclickshoulders/position = Vector2(1000.8138, 999)
 states/wrongclickbrain/node = SubResource("AnimationNodeAnimation_6ckfi")
-states/wrongclickbrain/position = Vector2(510.72855, 366.21426)
+states/wrongclickbrain/position = Vector2(527.72864, 118.214264)
 states/wrongclickbrainfeetaction/node = SubResource("AnimationNodeAnimation_v6cn3")
-states/wrongclickbrainfeetaction/position = Vector2(959.8138, 366.21426)
+states/wrongclickbrainfeetaction/position = Vector2(1032.8137, 133.21426)
 states/wrongclickbrainshoulderaction/node = SubResource("AnimationNodeAnimation_afuko")
-states/wrongclickbrainshoulderaction/position = Vector2(981.8138, 440.24924)
+states/wrongclickbrainshoulderaction/position = Vector2(1015.8137, 292.59192)
 states/wrongclickfoot/node = SubResource("AnimationNodeAnimation_3d0u7")
 states/wrongclickfoot/position = Vector2(518.72864, 586.21423)
 states/wrongclickfootfeetaction/node = SubResource("AnimationNodeAnimation_b6y15")
@@ -6121,7 +6127,7 @@ states/wrongclickshouldersfeetaction/position = Vector2(1032.8137, 915.516)
 states/wrongclickshouldersshoulderaction/node = SubResource("AnimationNodeAnimation_dnmiw")
 states/wrongclickshouldersshoulderaction/position = Vector2(1039.8137, 827.21423)
 transitions = ["shouldersleft", "regidleright", SubResource("AnimationNodeStateMachineTransition_g3eqb"), "rightlegup", "idlerightup", SubResource("AnimationNodeStateMachineTransition_02y3x"), "idlerightup", "shouldersright", SubResource("AnimationNodeStateMachineTransition_v3wym"), "shouldersright", "regidleleft", SubResource("AnimationNodeStateMachineTransition_2ylqb"), "regidleleft", "leftlegup", SubResource("AnimationNodeStateMachineTransition_j56tp"), "leftlegup", "idleleftup", SubResource("AnimationNodeStateMachineTransition_xb26a"), "idleleftup", "shouldersleft", SubResource("AnimationNodeStateMachineTransition_mb6ph"), "regidleright", "wrongclickbrain", SubResource("AnimationNodeStateMachineTransition_r6fuh"), "regidleright", "wrongclickfoot", SubResource("AnimationNodeStateMachineTransition_0xb6o"), "regidleright", "wrongclickshoulders", SubResource("AnimationNodeStateMachineTransition_6b5kb"), "wrongclickbrain", "idlewrongclickbrain", SubResource("AnimationNodeStateMachineTransition_4kipb"), "idlewrongclickbrain", "wrongclickbrainfeetaction", SubResource("AnimationNodeStateMachineTransition_7pf30"), "idlewrongclickbrain", "wrongclickbrainshoulderaction", SubResource("AnimationNodeStateMachineTransition_oheq7"), "wrongclickbrainshoulderaction", "idlewrongclickbrain", SubResource("AnimationNodeStateMachineTransition_l2fwy"), "idlewrongclickbrain", "upwrongclickbrain", SubResource("AnimationNodeStateMachineTransition_r3dwm"), "upwrongclickbrain", "regidleright", SubResource("AnimationNodeStateMachineTransition_231yb"), "wrongclickbrainfeetaction", "idlewrongclickbrain", SubResource("AnimationNodeStateMachineTransition_sbhv2"), "wrongclickfoot", "idlewrongclickfoot", SubResource("AnimationNodeStateMachineTransition_u6cs7"), "idlewrongclickfoot", "upwrongclickfoot", SubResource("AnimationNodeStateMachineTransition_evx2r"), "upwrongclickfoot", "regidleright", SubResource("AnimationNodeStateMachineTransition_d0ood"), "idlewrongclickfoot", "wrongclickfootfeetaction", SubResource("AnimationNodeStateMachineTransition_bue73"), "wrongclickfootfeetaction", "idlewrongclickfoot", SubResource("AnimationNodeStateMachineTransition_sdops"), "idlewrongclickfoot", "wrongclickfootshoulderaction", SubResource("AnimationNodeStateMachineTransition_rsk1s"), "wrongclickfootshoulderaction", "idlewrongclickfoot", SubResource("AnimationNodeStateMachineTransition_ds12q"), "wrongclickshoulders", "idlewrongclickshoulders", SubResource("AnimationNodeStateMachineTransition_wvb8x"), "idlewrongclickshoulders", "wrongclickshouldersshoulderaction", SubResource("AnimationNodeStateMachineTransition_ob3id"), "idlewrongclickshoulders", "wrongclickshouldersfeetaction", SubResource("AnimationNodeStateMachineTransition_20v6k"), "idlewrongclickshoulders", "upwrongclickshoulders", SubResource("AnimationNodeStateMachineTransition_yffie"), "upwrongclickshoulders", "regidleright", SubResource("AnimationNodeStateMachineTransition_3qahl"), "regidleright", "rightlegup", SubResource("AnimationNodeStateMachineTransition_4y1ou"), "Start", "regidleright", SubResource("AnimationNodeStateMachineTransition_10vyd")]
-graph_offset = Vector2(1764.3623, -259.1736)
+graph_offset = Vector2(155.42194, 31.881508)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h8rah"]
 animations = [{
@@ -6156,6 +6162,8 @@ libraries/ = SubResource("AnimationLibrary_skace")
 root_node = NodePath("../legs/leftleg")
 tree_root = SubResource("AnimationNodeStateMachine_ubqrh")
 anim_player = NodePath("../APChad")
+parameters/conditions/both = false
+parameters/conditions/brain = false
 parameters/conditions/left = false
 parameters/conditions/right = false
 parameters/conditions/shoulders = false
