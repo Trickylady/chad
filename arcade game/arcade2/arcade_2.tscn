@@ -34,3 +34,18 @@ position = Vector2(1653, 532)
 [node name="Node2D" type="Node2D" parent="." unique_id=761087253]
 script = ExtResource("5_wbqo7")
 Music = ExtResource("6_ffts2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1781696715]
+offset_left = 75.0
+offset_top = 941.0
+offset_right = 250.0
+offset_bottom = 994.0
+text = "0/3 Honeybees
+0/3 Hornets"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=475731665]
+offset_left = 44.0
+offset_top = 41.0
+offset_right = 592.0
+offset_bottom = 229.0
+text = "score:"

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dku1iree58omq"]
 
+[ext_resource type="Script" uid="uid://bb28wuij6ukgf" path="res://scenes/chad.gd" id="1_10vyd"]
 [ext_resource type="Texture2D" uid="uid://cmeawq7mwoc8n" path="res://images/chad/rightarm.png" id="1_btj17"]
 [ext_resource type="Texture2D" uid="uid://c52w0pxx3jdge" path="res://images/chad/legs/leftleg.png" id="2_1kov8"]
 [ext_resource type="Texture2D" uid="uid://i1bqucse3fql" path="res://images/chad/legs/leftfoot.png" id="2_4b2js"]
@@ -1015,6 +1016,132 @@ tracks/9/keys = {
 "values": [0.0, -0.034906585, 0.0]
 }
 
+[sub_resource type="Animation" id="Animation_01i32"]
+resource_name = "idleleftplusright"
+length = 2.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(70, 500), Vector2(70, 500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.7453293, -1.7453293]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../rightleg:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(100, 500), Vector2(100, 500)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../rightleg:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.5707964, -1.5707964]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../Chadbody:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-88, -109), Vector2(-88, -109)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../Chadbody:rotation")
+tracks/5/interp = 4
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.08726646, 0.08726646, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../Chadbody/Leftarm:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-7, -400), Vector2(-7, -400)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../Chadbody/Leftarm:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.17453292, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../Chadbody/Rightarm:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-23, -465), Vector2(-23, -465)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../Chadbody/Rightarm:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.17453292, 0.0]
+}
+
 [sub_resource type="Animation" id="Animation_ehoi3"]
 resource_name = "idleleftup"
 loop_mode = 1
@@ -1997,6 +2124,253 @@ tracks/9/keys = {
 "values": [-1.2217305, -2.6179938, -2.268928, -1.7453293]
 }
 
+[sub_resource type="Animation" id="Animation_u0bqb"]
+resource_name = "leftplusrightfeetaction"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(70, 500), Vector2(160, 440), Vector2(70, 500), Vector2(70, 500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-1.7453293, -2.0943952, -1.7453293, -1.7453293]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../rightleg:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(100, 500), Vector2(100, 500), Vector2(180, 470), Vector2(100, 500)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../rightleg:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-1.5707964, -1.5707964, -2.0943952, -1.5707964]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../Chadbody:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-88, -109), Vector2(-88, -109)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../Chadbody:rotation")
+tracks/5/interp = 4
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.08726646, 0.0, -0.08726646, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../Chadbody/Leftarm:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-7, -400), Vector2(-7, -400)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../Chadbody/Leftarm:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.5235988, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../Chadbody/Rightarm:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-23, -465), Vector2(-23, -465)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../Chadbody/Rightarm:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.87266463, -0.6981317, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_03je8"]
+resource_name = "leftplusrightshoulderaction"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(70, 500), Vector2(70, 500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.7453293, -1.7453293]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../rightleg:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(100, 500), Vector2(100, 500)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../rightleg:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.5707964, -1.5707964]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../Chadbody:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-88, -109), Vector2(-88, -109)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../Chadbody:rotation")
+tracks/5/interp = 4
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../Chadbody/Leftarm:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-7, -400), Vector2(-7, -400)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../Chadbody/Leftarm:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -1.7453293, -1.3962634, -1.7453293, -1.3962634, -1.7453293, -1.3962634, -1.7453293, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../Chadbody/Rightarm:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-23, -465), Vector2(-23, -465)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../Chadbody/Rightarm:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
 [sub_resource type="Animation" id="Animation_pnu3x"]
 resource_name = "leftrightbrain"
 step = 0.5
@@ -2119,132 +2493,6 @@ tracks/9/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, -0.6981317, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_01i32"]
-resource_name = "leftrightidle"
-length = 2.0
-loop_mode = 1
-step = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(70, 500), Vector2(70, 500)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-1.7453293, -1.7453293]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../rightleg:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(100, 500), Vector2(100, 500)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../rightleg:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-1.5707964, -1.5707964]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../../Chadbody:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-88, -109), Vector2(-88, -109)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../../Chadbody:rotation")
-tracks/5/interp = 4
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -0.08726646, 0.08726646, 0.0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../../Chadbody/Leftarm:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-7, -400), Vector2(-7, -400)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../../Chadbody/Leftarm:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, -0.17453292, 0.0]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("../../Chadbody/Rightarm:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-23, -465), Vector2(-23, -465)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("../../Chadbody/Rightarm:rotation")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.17453292, 0.0]
 }
 
 [sub_resource type="Animation" id="Animation_l8s6t"]
@@ -3583,6 +3831,129 @@ tracks/9/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [1.7453293, 0.87266463, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_mq4ch"]
+resource_name = "upleftplusright"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(70, 500), Vector2(-73, 230), Vector2(-130, 200), Vector2(-100, -30), Vector2(-130, 200)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.7453293, 0.0, 0.0, 0.87266463, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../rightleg:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(100, 500), Vector2(125, 200), Vector2(12, 220), Vector2(120, -10), Vector2(12, 220)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../rightleg:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.5707964, 0.34906584, 0.0, -1.0471976, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../Chadbody:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-88, -109), Vector2(-80, -250), Vector2(-88, -243), Vector2(-88, -630), Vector2(-88, -340)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../Chadbody:rotation")
+tracks/5/interp = 4
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.34906584, -0.17453292, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../Chadbody/Leftarm:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, -400), Vector2(-7, -400), Vector2(-7, -400), Vector2(-7, -400)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../Chadbody/Leftarm:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -1.3089969, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../Chadbody/Rightarm:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-23, -465), Vector2(-23, -485), Vector2(-23, -480), Vector2(-23, -485)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../Chadbody/Rightarm:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -1.3962634, 0.0]
 }
 
 [sub_resource type="Animation" id="Animation_mohsf"]
@@ -5442,6 +5813,7 @@ _data = {
 &"footdoubleright": SubResource("Animation_dth1u"),
 &"idledoubleleft": SubResource("Animation_340da"),
 &"idledoubleright": SubResource("Animation_dsdoc"),
+&"idleleftplusright": SubResource("Animation_01i32"),
 &"idleleftup": SubResource("Animation_ehoi3"),
 &"idlerightup": SubResource("Animation_gebft"),
 &"idlewrongbrainusedonshoulders-leftleg": SubResource("Animation_avtkd"),
@@ -5450,8 +5822,9 @@ _data = {
 &"idlewrongclickshoulders": SubResource("Animation_0n1o6"),
 &"leftlegup": SubResource("Animation_skace"),
 &"leftplusright": SubResource("Animation_3mngj"),
+&"leftplusrightfeetaction": SubResource("Animation_u0bqb"),
+&"leftplusrightshoulderaction": SubResource("Animation_03je8"),
 &"leftrightbrain": SubResource("Animation_pnu3x"),
-&"leftrightidle": SubResource("Animation_01i32"),
 &"regidleleft": SubResource("Animation_l8s6t"),
 &"regidleright": SubResource("Animation_m566k"),
 &"rightlegup": SubResource("Animation_tt4ac"),
@@ -5463,6 +5836,7 @@ _data = {
 &"shouldersright": SubResource("Animation_10vyd"),
 &"updoubleleft": SubResource("Animation_2sx4p"),
 &"updoubleright": SubResource("Animation_6sr50"),
+&"upleftplusright": SubResource("Animation_mq4ch"),
 &"upwrongclickbrain": SubResource("Animation_mohsf"),
 &"upwrongclickfoot": SubResource("Animation_mglr5"),
 &"upwrongclickshoulders": SubResource("Animation_1lfrh"),
@@ -5479,6 +5853,275 @@ _data = {
 &"wrongclickshouldersfeetaction": SubResource("Animation_k23l1"),
 &"wrongclickshouldersshoulderaction": SubResource("Animation_6i3mj")
 }
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_u0bqb"]
+animation = &"doublerightleg"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dyog7"]
+animation = &"footdoubleright"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1fagl"]
+animation = &"idledoubleright"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_45cf3"]
+animation = &"idleleftplusright"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_h7pfc"]
+animation = &"idleleftup"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y61ji"]
+animation = &"idlerightup"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lkv3e"]
+animation = &"idlewrongclickbrain"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5xy2k"]
+animation = &"idlewrongclickfoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r14o8"]
+animation = &"idlewrongclickshoulders"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_svy8r"]
+animation = &"leftlegup"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gebft"]
+animation = &"leftplusrightfeetaction"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_skace"]
+animation = &"leftplusrightshoulderaction"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0lgql"]
+animation = &"regidleleft"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xdu6d"]
+animation = &"regidleright"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1v2vb"]
+animation = &"rightlegup"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cu2pu"]
+animation = &"rightplusleft"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ysfru"]
+animation = &"shouldersdoubleright"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ycev6"]
+animation = &"shouldersleft"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kejj3"]
+animation = &"shouldersright"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f60dr"]
+animation = &"updoubleright"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xugiu"]
+animation = &"upleftplusright"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l64kv"]
+animation = &"upwrongclickbrain"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bm3bl"]
+animation = &"upwrongclickfoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r3xiu"]
+animation = &"upwrongclickshoulders"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6ckfi"]
+animation = &"wrongclickbrain"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v6cn3"]
+animation = &"wrongclickbrainfeetaction"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_afuko"]
+animation = &"wrongclickbrainshoulderaction"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3d0u7"]
+animation = &"wrongclickfoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b6y15"]
+animation = &"wrongclickfootfeetaction"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_raj2x"]
+animation = &"wrongclickfootshoulderaction"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t45ac"]
+animation = &"wrongclickshoulders"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dwhy4"]
+animation = &"wrongclickshouldersfeetaction"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dnmiw"]
+animation = &"wrongclickshouldersshoulderaction"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g3eqb"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_02y3x"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_v3wym"]
+advance_mode = 2
+advance_condition = &"shoulders"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2ylqb"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j56tp"]
+advance_mode = 2
+advance_condition = &"left"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xb26a"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mb6ph"]
+advance_mode = 2
+advance_condition = &"shoulders"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r6fuh"]
+switch_mode = 2
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0xb6o"]
+switch_mode = 2
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6b5kb"]
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4kipb"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7pf30"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oheq7"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_l2fwy"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r3dwm"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_231yb"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sbhv2"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u6cs7"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_evx2r"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d0ood"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bue73"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sdops"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rsk1s"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ds12q"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wvb8x"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ob3id"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_20v6k"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yffie"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3qahl"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4y1ou"]
+advance_mode = 2
+advance_condition = &"right"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_10vyd"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ubqrh"]
+states/End/position = Vector2(469, -44)
+states/Start/position = Vector2(168, 38)
+states/doublerightleg/node = SubResource("AnimationNodeAnimation_u0bqb")
+states/doublerightleg/position = Vector2(1586.8462, 213.5919)
+states/footdoubleright/node = SubResource("AnimationNodeAnimation_dyog7")
+states/footdoubleright/position = Vector2(1959.751, 320.39365)
+states/idledoubleright/node = SubResource("AnimationNodeAnimation_1fagl")
+states/idledoubleright/position = Vector2(1756.8462, 213.5919)
+states/idleleftplusright/node = SubResource("AnimationNodeAnimation_45cf3")
+states/idleleftplusright/position = Vector2(1775.751, 523.10205)
+states/idleleftup/node = SubResource("AnimationNodeAnimation_h7pfc")
+states/idleleftup/position = Vector2(2647.7842, 142)
+states/idlerightup/node = SubResource("AnimationNodeAnimation_y61ji")
+states/idlerightup/position = Vector2(1409, 142)
+states/idlewrongclickbrain/node = SubResource("AnimationNodeAnimation_lkv3e")
+states/idlewrongclickbrain/position = Vector2(709.8138, 366.21426)
+states/idlewrongclickfoot/node = SubResource("AnimationNodeAnimation_5xy2k")
+states/idlewrongclickfoot/position = Vector2(695.8138, 586.21423)
+states/idlewrongclickshoulders/node = SubResource("AnimationNodeAnimation_r14o8")
+states/idlewrongclickshoulders/position = Vector2(734.8138, 827.21423)
+states/leftlegup/node = SubResource("AnimationNodeAnimation_svy8r")
+states/leftlegup/position = Vector2(2534.7842, 147)
+states/leftplusrightfeetaction/node = SubResource("AnimationNodeAnimation_gebft")
+states/leftplusrightfeetaction/position = Vector2(1969.8596, 618)
+states/leftplusrightshoulderaction/node = SubResource("AnimationNodeAnimation_skace")
+states/leftplusrightshoulderaction/position = Vector2(1985.8596, 691)
+states/regidleleft/node = SubResource("AnimationNodeAnimation_0lgql")
+states/regidleleft/position = Vector2(2371.7844, 147)
+states/regidleright/node = SubResource("AnimationNodeAnimation_xdu6d")
+states/regidleright/position = Vector2(360, 48)
+states/rightlegup/node = SubResource("AnimationNodeAnimation_1v2vb")
+states/rightlegup/position = Vector2(1262.7286, 142)
+states/rightplusleft/node = SubResource("AnimationNodeAnimation_cu2pu")
+states/rightplusleft/position = Vector2(1586.8462, 520.24927)
+states/shouldersdoubleright/node = SubResource("AnimationNodeAnimation_ysfru")
+states/shouldersdoubleright/position = Vector2(1979.751, 425.39365)
+states/shouldersleft/node = SubResource("AnimationNodeAnimation_ycev6")
+states/shouldersleft/position = Vector2(2647.7842, 38)
+states/shouldersright/node = SubResource("AnimationNodeAnimation_kejj3")
+states/shouldersright/position = Vector2(2138, 147)
+states/updoubleright/node = SubResource("AnimationNodeAnimation_f60dr")
+states/updoubleright/position = Vector2(1943.947, 213.5919)
+states/upleftplusright/node = SubResource("AnimationNodeAnimation_xugiu")
+states/upleftplusright/position = Vector2(1942.751, 531.10205)
+states/upwrongclickbrain/node = SubResource("AnimationNodeAnimation_l64kv")
+states/upwrongclickbrain/position = Vector2(948.8138, 520.24927)
+states/upwrongclickfoot/node = SubResource("AnimationNodeAnimation_bm3bl")
+states/upwrongclickfoot/position = Vector2(948.8138, 742.24927)
+states/upwrongclickshoulders/node = SubResource("AnimationNodeAnimation_r3xiu")
+states/upwrongclickshoulders/position = Vector2(1000.8138, 999)
+states/wrongclickbrain/node = SubResource("AnimationNodeAnimation_6ckfi")
+states/wrongclickbrain/position = Vector2(510.72855, 366.21426)
+states/wrongclickbrainfeetaction/node = SubResource("AnimationNodeAnimation_v6cn3")
+states/wrongclickbrainfeetaction/position = Vector2(959.8138, 366.21426)
+states/wrongclickbrainshoulderaction/node = SubResource("AnimationNodeAnimation_afuko")
+states/wrongclickbrainshoulderaction/position = Vector2(981.8138, 440.24924)
+states/wrongclickfoot/node = SubResource("AnimationNodeAnimation_3d0u7")
+states/wrongclickfoot/position = Vector2(518.72864, 586.21423)
+states/wrongclickfootfeetaction/node = SubResource("AnimationNodeAnimation_b6y15")
+states/wrongclickfootfeetaction/position = Vector2(954.8138, 596.24927)
+states/wrongclickfootshoulderaction/node = SubResource("AnimationNodeAnimation_raj2x")
+states/wrongclickfootshoulderaction/position = Vector2(959.8138, 677.24927)
+states/wrongclickshoulders/node = SubResource("AnimationNodeAnimation_t45ac")
+states/wrongclickshoulders/position = Vector2(488.72852, 827.21423)
+states/wrongclickshouldersfeetaction/node = SubResource("AnimationNodeAnimation_dwhy4")
+states/wrongclickshouldersfeetaction/position = Vector2(1032.8137, 915.516)
+states/wrongclickshouldersshoulderaction/node = SubResource("AnimationNodeAnimation_dnmiw")
+states/wrongclickshouldersshoulderaction/position = Vector2(1039.8137, 827.21423)
+transitions = ["shouldersleft", "regidleright", SubResource("AnimationNodeStateMachineTransition_g3eqb"), "rightlegup", "idlerightup", SubResource("AnimationNodeStateMachineTransition_02y3x"), "idlerightup", "shouldersright", SubResource("AnimationNodeStateMachineTransition_v3wym"), "shouldersright", "regidleleft", SubResource("AnimationNodeStateMachineTransition_2ylqb"), "regidleleft", "leftlegup", SubResource("AnimationNodeStateMachineTransition_j56tp"), "leftlegup", "idleleftup", SubResource("AnimationNodeStateMachineTransition_xb26a"), "idleleftup", "shouldersleft", SubResource("AnimationNodeStateMachineTransition_mb6ph"), "regidleright", "wrongclickbrain", SubResource("AnimationNodeStateMachineTransition_r6fuh"), "regidleright", "wrongclickfoot", SubResource("AnimationNodeStateMachineTransition_0xb6o"), "regidleright", "wrongclickshoulders", SubResource("AnimationNodeStateMachineTransition_6b5kb"), "wrongclickbrain", "idlewrongclickbrain", SubResource("AnimationNodeStateMachineTransition_4kipb"), "idlewrongclickbrain", "wrongclickbrainfeetaction", SubResource("AnimationNodeStateMachineTransition_7pf30"), "idlewrongclickbrain", "wrongclickbrainshoulderaction", SubResource("AnimationNodeStateMachineTransition_oheq7"), "wrongclickbrainshoulderaction", "idlewrongclickbrain", SubResource("AnimationNodeStateMachineTransition_l2fwy"), "idlewrongclickbrain", "upwrongclickbrain", SubResource("AnimationNodeStateMachineTransition_r3dwm"), "upwrongclickbrain", "regidleright", SubResource("AnimationNodeStateMachineTransition_231yb"), "wrongclickbrainfeetaction", "idlewrongclickbrain", SubResource("AnimationNodeStateMachineTransition_sbhv2"), "wrongclickfoot", "idlewrongclickfoot", SubResource("AnimationNodeStateMachineTransition_u6cs7"), "idlewrongclickfoot", "upwrongclickfoot", SubResource("AnimationNodeStateMachineTransition_evx2r"), "upwrongclickfoot", "regidleright", SubResource("AnimationNodeStateMachineTransition_d0ood"), "idlewrongclickfoot", "wrongclickfootfeetaction", SubResource("AnimationNodeStateMachineTransition_bue73"), "wrongclickfootfeetaction", "idlewrongclickfoot", SubResource("AnimationNodeStateMachineTransition_sdops"), "idlewrongclickfoot", "wrongclickfootshoulderaction", SubResource("AnimationNodeStateMachineTransition_rsk1s"), "wrongclickfootshoulderaction", "idlewrongclickfoot", SubResource("AnimationNodeStateMachineTransition_ds12q"), "wrongclickshoulders", "idlewrongclickshoulders", SubResource("AnimationNodeStateMachineTransition_wvb8x"), "idlewrongclickshoulders", "wrongclickshouldersshoulderaction", SubResource("AnimationNodeStateMachineTransition_ob3id"), "idlewrongclickshoulders", "wrongclickshouldersfeetaction", SubResource("AnimationNodeStateMachineTransition_20v6k"), "idlewrongclickshoulders", "upwrongclickshoulders", SubResource("AnimationNodeStateMachineTransition_yffie"), "upwrongclickshoulders", "regidleright", SubResource("AnimationNodeStateMachineTransition_3qahl"), "regidleright", "rightlegup", SubResource("AnimationNodeStateMachineTransition_4y1ou"), "Start", "regidleright", SubResource("AnimationNodeStateMachineTransition_10vyd")]
+graph_offset = Vector2(1764.3623, -259.1736)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h8rah"]
 animations = [{
@@ -5503,10 +6146,19 @@ animations = [{
 }]
 
 [node name="chad" type="Node2D" unique_id=161986547]
+script = ExtResource("1_10vyd")
 
 [node name="APChad" type="AnimationPlayer" parent="." unique_id=620714036]
 root_node = NodePath("../legs/leftleg")
 libraries/ = SubResource("AnimationLibrary_skace")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=30759476]
+root_node = NodePath("../legs/leftleg")
+tree_root = SubResource("AnimationNodeStateMachine_ubqrh")
+anim_player = NodePath("../APChad")
+parameters/conditions/left = false
+parameters/conditions/right = false
+parameters/conditions/shoulders = false
 
 [node name="legs" type="Node2D" parent="." unique_id=1183954054]
 position = Vector2(-64, -601)
@@ -5525,6 +6177,12 @@ position = Vector2(34.319965, 88.588394)
 rotation = -0.04288938
 texture = ExtResource("2_1kov8")
 
+[node name="Buttleftleg" type="Button" parent="legs/leftleg" unique_id=541907431]
+offset_left = -11.938019
+offset_top = 118.92868
+offset_right = 90.384285
+offset_bottom = 344.62146
+
 [node name="rightleg" type="Node2D" parent="legs" unique_id=1724078083]
 position = Vector2(12, 220)
 
@@ -5537,6 +6195,12 @@ texture = ExtResource("4_hl1ba")
 position = Vector2(40.946953, 102.83888)
 rotation = -0.04288938
 texture = ExtResource("3_umdmt")
+
+[node name="Buttrightleg" type="Button" parent="legs/rightleg" unique_id=1758240135]
+offset_left = -11.938026
+offset_top = 118.928696
+offset_right = 90.38428
+offset_bottom = 344.6215
 
 [node name="Chadbody" type="Node2D" parent="." unique_id=1070266]
 position = Vector2(-88, -340)
@@ -5562,6 +6226,12 @@ sprite_frames = SubResource("SpriteFrames_h8rah")
 animation = &"cape"
 frame_progress = 0.046496324
 offset = Vector2(-329, -159)
+
+[node name="Buttshoulders" type="Button" parent="Chadbody/Capes" unique_id=27571046]
+offset_left = -321.5
+offset_top = -434.59534
+offset_right = 67.5
+offset_bottom = -316.59534
 
 [node name="face" type="Node2D" parent="Chadbody" unique_id=1067485344]
 position = Vector2(-56.499992, -572.4047)
@@ -5661,3 +6331,17 @@ texture = ExtResource("26_ehoi3")
 visible = false
 position = Vector2(-1.3437653, 9.870483)
 texture = ExtResource("27_nxqc0")
+
+[node name="Buttbrain" type="Button" parent="Chadbody/face" unique_id=956657831]
+offset_left = -126.66604
+offset_top = -285.455
+offset_right = 161.60022
+offset_bottom = -119.79349
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1221919540]
+position = Vector2(-61, -596)
+
+[connection signal="pressed" from="legs/leftleg/Buttleftleg" to="." method="_on_buttleftleg_pressed"]
+[connection signal="pressed" from="legs/rightleg/Buttrightleg" to="." method="_on_buttrightleg_pressed"]
+[connection signal="pressed" from="Chadbody/Capes/Buttshoulders" to="." method="_on_buttshoulders_pressed"]
+[connection signal="pressed" from="Chadbody/face/Buttbrain" to="." method="_on_buttbrain_pressed"]
