@@ -1,0 +1,778 @@
+[gd_scene load_steps=81 format=3 uid="uid://bokgnhsnekbfu"]
+
+[ext_resource type="Texture2D" uid="uid://i1bqucse3fql" path="res://images/chad/legs/leftfoot.png" id="1_cvuq7"]
+[ext_resource type="Texture2D" uid="uid://bjojq7wt4bbqx" path="res://scenes/intro/introbg.png" id="1_jbtog"]
+[ext_resource type="Texture2D" uid="uid://dnag6d3qvurq4" path="res://scenes/intro/puddle.png" id="2_338pc"]
+[ext_resource type="Texture2D" uid="uid://di0xl3qtcvpg8" path="res://scenes/intro/leftshoe.png" id="2_kyl2y"]
+[ext_resource type="Texture2D" uid="uid://c52w0pxx3jdge" path="res://images/chad/legs/leftleg.png" id="2_l0afb"]
+[ext_resource type="Texture2D" uid="uid://ndtamup4tuh2" path="res://scenes/intro/splash.png" id="3_cysou"]
+[ext_resource type="Texture2D" uid="uid://dr0fi26koi6gq" path="res://images/chad/legs/rightfoot.png" id="3_qt07c"]
+[ext_resource type="Texture2D" uid="uid://bm8xff5g0mkkh" path="res://scenes/intro/splash 2.png" id="4_4wetk"]
+[ext_resource type="Texture2D" uid="uid://cmxaov00jg2kg" path="res://images/chad/legs/legs.png" id="4_wrgu3"]
+[ext_resource type="Texture2D" uid="uid://dxi770wttm8wt" path="res://scenes/intro/rightshoe.png" id="5_5poku"]
+[ext_resource type="Texture2D" uid="uid://c1nk8nmscw455" path="res://images/chad/leftarm.png" id="5_a316x"]
+[ext_resource type="Texture2D" uid="uid://b2j4p7gbbttnh" path="res://scenes/intro/splash 3.png" id="5_vgudq"]
+[ext_resource type="Texture2D" uid="uid://dytpe0t4vi1d1" path="res://images/chad/body.png" id="6_2ku6v"]
+[ext_resource type="Texture2D" uid="uid://bif6qknvoc0pn" path="res://scenes/intro/splash 4.png" id="6_26vhr"]
+[ext_resource type="Texture2D" uid="uid://573s7kojexgm" path="res://scenes/intro/car.png" id="7_3frnu"]
+[ext_resource type="Texture2D" uid="uid://cmeawq7mwoc8n" path="res://images/chad/rightarm.png" id="7_kyl2y"]
+[ext_resource type="Texture2D" uid="uid://qg7q5urp1q67" path="res://images/chad/cape1.png" id="8_5poku"]
+[ext_resource type="Texture2D" uid="uid://b1mymvktt8l4u" path="res://scenes/intro/carwheelback.png" id="8_jqjwk"]
+[ext_resource type="Texture2D" uid="uid://pqolwx20gxwt" path="res://scenes/intro/shirt left.png" id="8_ncjvl"]
+[ext_resource type="Texture2D" uid="uid://c8wgef635n7p" path="res://scenes/intro/carwheelfront.png" id="9_ben7c"]
+[ext_resource type="Texture2D" uid="uid://bhn8c8rmpt3i1" path="res://images/chad/cape2.png" id="9_ncjvl"]
+[ext_resource type="Texture2D" uid="uid://q74wpme24x20" path="res://images/chad/cape3.png" id="10_21euv"]
+[ext_resource type="Texture2D" uid="uid://cab6stg42p3g3" path="res://scenes/intro/carparts.png" id="10_dwtrg"]
+[ext_resource type="Texture2D" uid="uid://b1weih0gfyf6p" path="res://scenes/intro/shirt.png" id="10_whmcg"]
+[ext_resource type="Texture2D" uid="uid://q5hjwcelstte" path="res://scenes/intro/chezdaisy.png" id="11_etr4m"]
+[ext_resource type="Texture2D" uid="uid://b1btae7b427ob" path="res://images/chad/face/head.png" id="11_whmcg"]
+[ext_resource type="Texture2D" uid="uid://oqygy5gtylye" path="res://scenes/intro/shirt right.png" id="12_aaiyo"]
+[ext_resource type="Texture2D" uid="uid://0rh6kmq3i34n" path="res://images/chad/face/chinline.png" id="12_ch5d5"]
+[ext_resource type="Texture2D" uid="uid://tyhwb1ncu482" path="res://scenes/intro/detective legs.png" id="12_t1jha"]
+[ext_resource type="Texture2D" uid="uid://c6tgwgm4k7bgb" path="res://scenes/intro/magnaglass.png" id="13_47ynr"]
+[ext_resource type="Texture2D" uid="uid://qhf77j5tkhb1" path="res://images/chad/face/mouht1.png" id="13_aaiyo"]
+[ext_resource type="Texture2D" uid="uid://cmocy3skj0pbm" path="res://scenes/intro/detective hand.png" id="14_rqci1"]
+[ext_resource type="Texture2D" uid="uid://bee8rfkkkgoid" path="res://images/chad/face/nose.png" id="14_xnd7m"]
+[ext_resource type="Texture2D" uid="uid://bbvr1rqufswxc" path="res://scenes/intro/detective top.png" id="15_50xch"]
+[ext_resource type="Texture2D" uid="uid://dhjgytg12panh" path="res://images/chad/face/eyesocket.png" id="15_lpego"]
+[ext_resource type="Texture2D" uid="uid://hjfto1pwe18f" path="res://images/chad/face/eyeball.png" id="16_7p2ln"]
+[ext_resource type="Texture2D" uid="uid://bebme0b14oruj" path="res://scenes/intro/paw print.png" id="16_b72v3"]
+[ext_resource type="Texture2D" uid="uid://di1jswe76ltrm" path="res://images/chad/face/eyebrow_left.png" id="17_p3wkv"]
+[ext_resource type="Texture2D" uid="uid://hk1wiiqivogf" path="res://images/chad/face/eyebrow_right.png" id="18_dntmf"]
+[ext_resource type="Script" uid="uid://72vafw3fvjov" path="res://scripts/hairstyles.gd" id="19_xo53p"]
+[ext_resource type="Texture2D" uid="uid://v1l77bwqqqv1" path="res://images/chad/face/hair/hair9a.png" id="20_bmtny"]
+[ext_resource type="Texture2D" uid="uid://begrv1ir0kwqv" path="res://images/chad/face/hair/hair9b.png" id="21_hjrlm"]
+[ext_resource type="Texture2D" uid="uid://dgrscbmhlmilq" path="res://images/chad/face/hair/hair1.png" id="22_enwsj"]
+[ext_resource type="Texture2D" uid="uid://4p6itxnkwmqj" path="res://images/chad/face/hair/hair2.png" id="23_cb3wr"]
+[ext_resource type="Texture2D" uid="uid://dtx1pyj1vird2" path="res://images/chad/face/hair/hair3.png" id="24_f3c7f"]
+[ext_resource type="Texture2D" uid="uid://lok0pt1dthts" path="res://scenes/intro/glasses.png" id="24_xnd7m"]
+[ext_resource type="Texture2D" uid="uid://54st2q52mkdx" path="res://images/chad/face/hair/hair4.png" id="25_lb7sy"]
+[ext_resource type="Texture2D" uid="uid://cbgpkaj4uxc14" path="res://images/chad/face/hair/hair5.png" id="26_72tn5"]
+[ext_resource type="Texture2D" uid="uid://8d4yxyl14pi" path="res://images/chad/face/hair/hair6.png" id="27_lwunk"]
+[ext_resource type="Texture2D" uid="uid://bws7asi7k0afb" path="res://images/chad/face/hair/hair7.png" id="28_1cjb8"]
+[ext_resource type="Texture2D" uid="uid://cjdgmmtvcyle6" path="res://images/chad/face/hair/hair8.png" id="29_n5w5f"]
+[ext_resource type="Texture2D" uid="uid://ndbawhjkcbp2" path="res://scenes/intro/swirl 1.png" id="52_s5toh"]
+[ext_resource type="Texture2D" uid="uid://cjkarhlcibcqu" path="res://scenes/intro/swirl 2.png" id="53_dtsdt"]
+[ext_resource type="Texture2D" uid="uid://cqlbpi3villhp" path="res://scenes/intro/swirl 3.png" id="54_n2fnm"]
+[ext_resource type="Texture2D" uid="uid://dtykljj27hor3" path="res://scenes/intro/roll 1.png" id="55_5qw23"]
+[ext_resource type="Texture2D" uid="uid://coc3dyjxxg6ih" path="res://scenes/intro/roll 2.png" id="56_i4iaq"]
+[ext_resource type="Texture2D" uid="uid://doorqfnjocraa" path="res://scenes/intro/roll 3.png" id="57_4mk03"]
+[ext_resource type="Texture2D" uid="uid://d43kv404cru7" path="res://scenes/intro/scooter backwheel.png" id="58_4beqx"]
+[ext_resource type="Texture2D" uid="uid://yvrjltr75qpa" path="res://scenes/intro/scooter front wheel.png" id="59_7vwvt"]
+[ext_resource type="Texture2D" uid="uid://byblg7ov3avcr" path="res://scenes/intro/lady on scooter.png" id="60_4ge7s"]
+[ext_resource type="Texture2D" uid="uid://cxuxgwdjbytky" path="res://scenes/intro/butterflyA.png" id="61_lyqc6"]
+[ext_resource type="Texture2D" uid="uid://dh2dcfyff5dsk" path="res://scenes/intro/butterflyB.png" id="62_7gie0"]
+[ext_resource type="Texture2D" uid="uid://cnwmxdg6qu3bx" path="res://scenes/intro/net.png" id="63_cna7f"]
+[ext_resource type="Texture2D" uid="uid://bosbmlhjofa8j" path="res://scenes/intro/nethand.png" id="64_avoju"]
+[ext_resource type="Texture2D" uid="uid://26batpnwumbf" path="res://scenes/intro/kidhandleft.png" id="65_1ek4v"]
+[ext_resource type="Texture2D" uid="uid://c4ak5vxbt3131" path="res://scenes/intro/kid arm right.png" id="66_3gund"]
+[ext_resource type="Texture2D" uid="uid://biqudk25qvj7a" path="res://scenes/intro/kid leg left.png" id="67_0svmk"]
+[ext_resource type="Texture2D" uid="uid://c2pdvxopantqo" path="res://scenes/intro/kid leg right.png" id="68_mrbxq"]
+[ext_resource type="Texture2D" uid="uid://0chhg70outdk" path="res://scenes/intro/kid chest.png" id="69_tiq25"]
+[ext_resource type="Texture2D" uid="uid://bgolt1ho5uw2q" path="res://scenes/intro/kid head.png" id="70_uggod"]
+[ext_resource type="Texture2D" uid="uid://c3b5eqxhsable" path="res://scenes/intro/kid hand right.png" id="71_hkohp"]
+[ext_resource type="Texture2D" uid="uid://3k0enns4ysv1" path="res://scenes/intro/kid arm left.png" id="72_3hukn"]
+[ext_resource type="Texture2D" uid="uid://b1timloce33p" path="res://scenes/intro/shrubs.png" id="73_m8yj2"]
+
+[sub_resource type="Animation" id="Animation_s5wwm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../chad/Chadbody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-88, -340)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../chad/Chadbody:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../chad:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(275, 815.00006)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../chad:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../chad:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3012638, 0.3012638)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../chad/Chadbody/Leftarm:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7, -400)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../chad/Chadbody/Leftarm:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../chad/Chadbody/Rightarm:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -485)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../chad/Chadbody/Rightarm:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../chad/Chadbody/Rightarm/ShirtRight:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../../chad/Chadbody/Leftarm/ShirtLeft:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../../chad/Chadbody/Capes:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../../chad:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_s8b4k"]
+resource_name = "chad"
+length = 20.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../chad/Chadbody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-88, -340)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../chad/Chadbody:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../chad:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6, 7, 9, 10, 11, 12, 13),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(275, 815.00006), Vector2(275, 815.00006), Vector2(727, 994.00006), Vector2(727, 994.00006), Vector2(498.00006, 833.99994), Vector2(635.00006, 742), Vector2(635.00006, 742), Vector2(2426, 774)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../chad:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../chad:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 6, 7, 9, 10, 11, 12, 13),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.3012638, 0.3012638), Vector2(0.3012638, 0.3012638), Vector2(0.39347562, 0.39347562), Vector2(0.39347562, 0.39347562), Vector2(0.2349318, 0.2349318), Vector2(0.2, 0.2), Vector2(0.2, 0.2), Vector2(0.4, 0.4)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../chad/Chadbody/Leftarm/ShirtLeft:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../chad/Chadbody/Capes:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../chad:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(7, 8, 9, 12, 13),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, true, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_it1de"]
+_data = {
+&"RESET": SubResource("Animation_s5wwm"),
+&"chad": SubResource("Animation_s8b4k")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h8rah"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5poku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ncjvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_21euv")
+}],
+"loop": true,
+"name": &"cape",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_itv0t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("52_s5toh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_dtsdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_n2fnm")
+}],
+"loop": true,
+"name": &"swirl",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rcfy3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_5qw23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_i4iaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_4mk03")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kv0to"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("61_lyqc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_7gie0")
+}],
+"loop": true,
+"name": &"butterfly",
+"speed": 6.0
+}]
+
+[node name="scene" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../bg/Splash")
+libraries = {
+&"": SubResource("AnimationLibrary_it1de")
+}
+
+[node name="bg" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_jbtog")
+
+[node name="Puddle" type="Sprite2D" parent="bg"]
+position = Vector2(440, 682)
+texture = ExtResource("2_338pc")
+
+[node name="Splash" type="Sprite2D" parent="bg"]
+visible = false
+position = Vector2(386, 611)
+texture = ExtResource("3_cysou")
+
+[node name="Splash2" type="Sprite2D" parent="bg"]
+visible = false
+position = Vector2(447, 602)
+texture = ExtResource("4_4wetk")
+
+[node name="Splash3" type="Sprite2D" parent="bg"]
+visible = false
+position = Vector2(381, 632)
+texture = ExtResource("5_vgudq")
+
+[node name="Splash4" type="Sprite2D" parent="bg"]
+visible = false
+position = Vector2(369, 694)
+texture = ExtResource("6_26vhr")
+
+[node name="car" type="Node2D" parent="bg"]
+position = Vector2(1193, 936)
+
+[node name="Car" type="Sprite2D" parent="bg/car"]
+position = Vector2(80, -484)
+texture = ExtResource("7_3frnu")
+
+[node name="Carwheelback" type="Sprite2D" parent="bg/car"]
+position = Vector2(249, -413)
+texture = ExtResource("8_jqjwk")
+
+[node name="Carwheelfront" type="Sprite2D" parent="bg/car"]
+position = Vector2(-59, -379)
+texture = ExtResource("9_ben7c")
+
+[node name="Carparts" type="Sprite2D" parent="bg/car"]
+position = Vector2(93, -418)
+texture = ExtResource("10_dwtrg")
+
+[node name="chezdaisy" type="TextureRect" parent="bg"]
+layout_mode = 0
+offset_left = 869.0
+offset_top = -2.0
+offset_right = 1951.0
+offset_bottom = 787.0
+texture = ExtResource("11_etr4m")
+
+[node name="detective" type="Node2D" parent="."]
+
+[node name="DetectiveLegs" type="Sprite2D" parent="detective"]
+position = Vector2(990, 689)
+texture = ExtResource("12_t1jha")
+
+[node name="Magnaglass" type="Sprite2D" parent="detective"]
+position = Vector2(878, 613)
+texture = ExtResource("13_47ynr")
+
+[node name="DetectiveHand" type="Sprite2D" parent="detective"]
+visible = false
+position = Vector2(910, 629)
+texture = ExtResource("14_rqci1")
+
+[node name="DetectiveTop" type="Sprite2D" parent="detective"]
+position = Vector2(960, 581)
+texture = ExtResource("15_50xch")
+
+[node name="PawPrint" type="Sprite2D" parent="detective"]
+position = Vector2(879, 770)
+texture = ExtResource("16_b72v3")
+
+[node name="chad" type="Node2D" parent="."]
+visible = false
+position = Vector2(275, 815.00006)
+scale = Vector2(0.3012638, 0.3012638)
+
+[node name="legs" type="Node2D" parent="chad"]
+position = Vector2(-64, -601)
+rotation = 0.04288938
+
+[node name="leftleg" type="Node2D" parent="chad/legs"]
+position = Vector2(-130, 200)
+
+[node name="Leftfoot" type="Sprite2D" parent="chad/legs/leftleg"]
+position = Vector2(110.15651, 217.86067)
+rotation = -0.04288938
+texture = ExtResource("1_cvuq7")
+
+[node name="Leftshoe" type="Sprite2D" parent="chad/legs/leftleg"]
+position = Vector2(113.43018, 300.17038)
+texture = ExtResource("2_kyl2y")
+
+[node name="leftleg" type="Sprite2D" parent="chad/legs/leftleg"]
+position = Vector2(34.319965, 88.588394)
+rotation = -0.04288938
+texture = ExtResource("2_l0afb")
+
+[node name="rightleg" type="Node2D" parent="chad/legs"]
+position = Vector2(12, 220)
+
+[node name="Rightfoot" type="Sprite2D" parent="chad/legs/rightleg"]
+position = Vector2(110, 210.878)
+rotation = -0.04288938
+texture = ExtResource("3_qt07c")
+
+[node name="Rightshoe" type="Sprite2D" parent="chad/legs/rightleg"]
+position = Vector2(116.4983, 301.9705)
+rotation = -0.04288938
+texture = ExtResource("5_5poku")
+
+[node name="rightleg2" type="Sprite2D" parent="chad/legs/rightleg"]
+position = Vector2(40.946953, 102.83888)
+rotation = -0.04288938
+texture = ExtResource("4_wrgu3")
+
+[node name="Chadbody" type="Node2D" parent="chad"]
+position = Vector2(-88, -340)
+
+[node name="Leftarm" type="Sprite2D" parent="chad/Chadbody"]
+position = Vector2(-7, -400)
+texture = ExtResource("5_a316x")
+offset = Vector2(146.4161, 149.8353)
+
+[node name="ShirtLeft" type="Sprite2D" parent="chad/Chadbody/Leftarm"]
+position = Vector2(102, 67)
+texture = ExtResource("8_ncjvl")
+
+[node name="Body" type="Sprite2D" parent="chad/Chadbody"]
+position = Vector2(65.5, -74.40466)
+texture = ExtResource("6_2ku6v")
+offset = Vector2(-73.334045, -215.09528)
+
+[node name="Shirt" type="Sprite2D" parent="chad/Chadbody"]
+position = Vector2(1.0000076, -342.00006)
+rotation = 0.04288938
+texture = ExtResource("10_whmcg")
+
+[node name="Rightarm" type="Sprite2D" parent="chad/Chadbody"]
+position = Vector2(-23, -485)
+texture = ExtResource("7_kyl2y")
+offset = Vector2(-81.99509, 205.50479)
+
+[node name="ShirtRight" type="Sprite2D" parent="chad/Chadbody/Rightarm"]
+position = Vector2(-66, 110)
+rotation = -0.04652365
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("12_aaiyo")
+
+[node name="Capes" type="AnimatedSprite2D" parent="chad/Chadbody"]
+visible = false
+position = Vector2(65.5, -74.40466)
+sprite_frames = SubResource("SpriteFrames_h8rah")
+animation = &"cape"
+frame_progress = 0.043063696
+offset = Vector2(-329, -159)
+
+[node name="face" type="Node2D" parent="chad/Chadbody"]
+position = Vector2(-56.499992, -572.4047)
+rotation = -0.04652365
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="Head" type="Sprite2D" parent="chad/Chadbody/face"]
+position = Vector2(3.1382446, -119.82397)
+texture = ExtResource("11_whmcg")
+
+[node name="Chinline" type="Sprite2D" parent="chad/Chadbody/face"]
+position = Vector2(10.3437805, -1.8705978)
+texture = ExtResource("12_ch5d5")
+
+[node name="Mouht1" type="Sprite2D" parent="chad/Chadbody/face"]
+position = Vector2(7.3437805, -53.870598)
+texture = ExtResource("13_aaiyo")
+
+[node name="Nose" type="Sprite2D" parent="chad/Chadbody/face"]
+position = Vector2(31.34378, -95.8706)
+texture = ExtResource("14_xnd7m")
+
+[node name="Eyesocket" type="Sprite2D" parent="chad/Chadbody/face"]
+position = Vector2(-40.65622, -154.87057)
+texture = ExtResource("15_lpego")
+
+[node name="Eyeball" type="Sprite2D" parent="chad/Chadbody/face"]
+position = Vector2(-39.65622, -153.87057)
+texture = ExtResource("16_7p2ln")
+
+[node name="Eyesocket2" type="Sprite2D" parent="chad/Chadbody/face"]
+position = Vector2(99.34378, -158.87057)
+texture = ExtResource("15_lpego")
+
+[node name="Eyeball2" type="Sprite2D" parent="chad/Chadbody/face"]
+position = Vector2(99.34378, -158.87057)
+texture = ExtResource("16_7p2ln")
+
+[node name="EyebrowLeft" type="Sprite2D" parent="chad/Chadbody/face"]
+position = Vector2(-63.65622, -194.87057)
+texture = ExtResource("17_p3wkv")
+
+[node name="EyebrowRight" type="Sprite2D" parent="chad/Chadbody/face"]
+position = Vector2(111.34378, -205.87057)
+texture = ExtResource("18_dntmf")
+
+[node name="Glasses" type="Sprite2D" parent="chad/Chadbody/face"]
+position = Vector2(19.862251, -157.84235)
+rotation = 0.046523646
+scale = Vector2(1.0000004, 1.0000004)
+texture = ExtResource("24_xnd7m")
+
+[node name="hairstyles" type="Node2D" parent="chad/Chadbody/face"]
+position = Vector2(45.34377, -274.87054)
+script = ExtResource("19_xo53p")
+
+[node name="Long" type="Sprite2D" parent="chad/Chadbody/face/hairstyles"]
+position = Vector2(1.656235, 6.8704844)
+texture = ExtResource("20_bmtny")
+
+[node name="hair1back" type="Sprite2D" parent="chad/Chadbody/face/hairstyles/Long"]
+z_index = -1
+position = Vector2(5.656224, 156.87048)
+texture = ExtResource("21_hjrlm")
+
+[node name="Bald" type="Sprite2D" parent="chad/Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(-1.8204613, 6.604126)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("22_enwsj")
+
+[node name="Fuchsia" type="Sprite2D" parent="chad/Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(-0.34376526, 2.8704834)
+texture = ExtResource("23_cb3wr")
+
+[node name="Curly" type="Sprite2D" parent="chad/Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(1.6562352, 24.870483)
+texture = ExtResource("24_f3c7f")
+
+[node name="Bowl" type="Sprite2D" parent="chad/Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(0.65623474, -0.1295166)
+texture = ExtResource("25_lb7sy")
+
+[node name="Fringe" type="Sprite2D" parent="chad/Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(0.65623474, 5.8704834)
+texture = ExtResource("26_72tn5")
+
+[node name="Elvis" type="Sprite2D" parent="chad/Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(-1.3437653, 16.870483)
+texture = ExtResource("27_lwunk")
+
+[node name="Blond" type="Sprite2D" parent="chad/Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(-1.3437655, 14.870483)
+texture = ExtResource("28_1cjb8")
+
+[node name="Mohawk" type="Sprite2D" parent="chad/Chadbody/face/hairstyles"]
+visible = false
+position = Vector2(-1.3437653, 9.870483)
+texture = ExtResource("29_n5w5f")
+
+[node name="swirl" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(245, 648)
+sprite_frames = SubResource("SpriteFrames_itv0t")
+animation = &"swirl"
+frame_progress = 0.5713186
+
+[node name="roll" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(1161, 896)
+sprite_frames = SubResource("SpriteFrames_rcfy3")
+animation = &"roll"
+frame_progress = 0.45024526
+
+[node name="scooter" type="Node2D" parent="."]
+position = Vector2(2252, 978)
+
+[node name="ScooterBackwheel" type="Sprite2D" parent="scooter"]
+position = Vector2(393, -4)
+texture = ExtResource("58_4beqx")
+
+[node name="ScooterFrontWheel" type="Sprite2D" parent="scooter"]
+position = Vector2(48, -8)
+texture = ExtResource("59_7vwvt")
+
+[node name="LadyOnScooter" type="Sprite2D" parent="scooter"]
+position = Vector2(239, -216)
+texture = ExtResource("60_4ge7s")
+
+[node name="butterfly" type="AnimatedSprite2D" parent="."]
+position = Vector2(2363, 283)
+sprite_frames = SubResource("SpriteFrames_kv0to")
+animation = &"butterfly"
+frame_progress = 0.8837322
+
+[node name="Net" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(358, 451)
+texture = ExtResource("63_cna7f")
+
+[node name="child" type="Node2D" parent="."]
+position = Vector2(1778, 888)
+
+[node name="Nethand" type="Sprite2D" parent="child"]
+position = Vector2(-83, -33)
+texture = ExtResource("64_avoju")
+offset = Vector2(90.5, -144)
+
+[node name="Kidhandleft" type="Sprite2D" parent="child"]
+visible = false
+position = Vector2(-636, -64)
+texture = ExtResource("65_1ek4v")
+
+[node name="KidArmRight" type="Sprite2D" parent="child"]
+position = Vector2(-18.5, -43)
+texture = ExtResource("66_3gund")
+
+[node name="KidLegLeft" type="Sprite2D" parent="child"]
+position = Vector2(49.5, 42)
+texture = ExtResource("67_0svmk")
+
+[node name="KidLegRight" type="Sprite2D" parent="child"]
+position = Vector2(-28.5, 47)
+texture = ExtResource("68_mrbxq")
+
+[node name="KidChest" type="Sprite2D" parent="child"]
+position = Vector2(-1, 2)
+texture = ExtResource("69_tiq25")
+offset = Vector2(10.5, -42)
+
+[node name="KidHead" type="Sprite2D" parent="child"]
+position = Vector2(-11.5, -147)
+texture = ExtResource("70_uggod")
+
+[node name="KidHandRight" type="Sprite2D" parent="child"]
+position = Vector2(-61, -27)
+texture = ExtResource("71_hkohp")
+
+[node name="KidArmLeft" type="Sprite2D" parent="child"]
+position = Vector2(-14, -40)
+texture = ExtResource("72_3hukn")
+
+[node name="bushes" type="TextureRect" parent="."]
+offset_left = 1677.0
+offset_top = 754.0
+offset_right = 4894.0
+offset_bottom = 1081.0
+texture = ExtResource("73_m8yj2")
+metadata/_edit_lock_ = true
