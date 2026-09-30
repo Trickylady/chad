@@ -5,6 +5,9 @@ extends Area2D
 @export var speed: float = 150.0 #px/s
 @export var sway_multiplier: float = 1.0
 
+
+@onready var visible_on_screen_notifier_2d: VisibleOnScreenNotifier2D = $VisibleOnScreenNotifier2D
+
 var idx: int
 
 var _initial_rotation: float
@@ -12,6 +15,7 @@ var _spawn_time: float
 
 
 func _ready() -> void:
+	visible_on_screen_notifier_2d.screen_exited.connect(queue_free)
 	_initial_rotation = randf() * TAU
 
 

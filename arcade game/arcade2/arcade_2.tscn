@@ -17,6 +17,14 @@
 [ext_resource type="Texture2D" uid="uid://b0l3byfpy82u5" path="res://arcade game/arcade2/imgarcade2/hoverflyB.png" id="12_p7eox"]
 [ext_resource type="Texture2D" uid="uid://cxnd1akp5k8f5" path="res://arcade game/arcade2/imgarcade2/AsianhornetA.png" id="12_xikv6"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5rnw"]
+bg_color = Color(0.14901961, 0.36862746, 1, 1)
+corner_radius_top_left = 800
+corner_radius_top_right = 800
+corner_radius_bottom_right = 800
+corner_radius_bottom_left = 800
+corner_detail = 16
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8mt0l"]
 bg_color = Color(0, 0, 0, 0.20784314)
 
@@ -31,6 +39,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_firqu")
+game_number = null
+voice_line_path = null
+turn_speed = null
 metadata/_edit_lock_ = true
 
 [node name="Background" type="TextureRect" parent="." unique_id=505753509]
@@ -55,7 +66,17 @@ offset_right = 2575.0
 offset_bottom = 1475.0
 texture = ExtResource("9_xikv6")
 
+[node name="PanelClip" type="Panel" parent="." unique_id=180829912]
+visible = false
+layout_mode = 0
+offset_left = 757.0
+offset_top = 64.0
+offset_right = 1727.0
+offset_bottom = 1015.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q5rnw")
+
 [node name="CatcherCenter" type="Node2D" parent="." unique_id=331329970]
+unique_name_in_owner = true
 position = Vector2(1252, 533)
 
 [node name="Net" parent="CatcherCenter" unique_id=202932209 instance=ExtResource("4_lh2y3")]
