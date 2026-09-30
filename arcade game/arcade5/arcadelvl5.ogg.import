@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dt0o6ma7qnmb0"
+path="res://.godot/imported/arcadelvl5.ogg-ce30a39e972ffed2417cc83df808e23f.oggvorbisstr"
+
+[deps]
+
+source_file="res://arcade game/arcade5/arcadelvl5.ogg"
+dest_files=["res://.godot/imported/arcadelvl5.ogg-ce30a39e972ffed2417cc83df808e23f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

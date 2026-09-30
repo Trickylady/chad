@@ -1,0 +1,229 @@
+[gd_scene format=3 uid="uid://jnpxuekhy5x5"]
+
+[ext_resource type="Script" uid="uid://v83n0jojjwv2" path="res://scripts/ArcadeGame.gd" id="1_0lhym"]
+[ext_resource type="Texture2D" uid="uid://dsle205k3ygm2" path="res://arcade game/arcade3/imgarcade3/big bg.png" id="2_00xe0"]
+[ext_resource type="Texture2D" uid="uid://b8gbatl4djw7" path="res://arcade game/arcade2/imgarcade2/flowers.png" id="3_ud4g8"]
+[ext_resource type="Texture2D" uid="uid://cqla2mcj52xf7" path="res://arcade game/magnifyingglass.png" id="4_hyvp4"]
+[ext_resource type="Script" uid="uid://injpqni88ybg" path="res://scripts/Catcher.gd" id="5_ewoq0"]
+[ext_resource type="Texture2D" uid="uid://bbnhv8a0er4dl" path="res://arcade game/arcade2/imgarcade2/grabber_arcade2.png" id="6_yt47y"]
+[ext_resource type="AudioStream" uid="uid://bjob08h4olb3f" path="res://arcade game/arcade3/arcade lvl3 intro.ogg" id="7_3ovqg"]
+[ext_resource type="AudioStream" uid="uid://caxjtvg8vkevc" path="res://arcade game/arcade3/music-for-videos-dance-dont-stop-electro-swing-150385.mp3" id="8_f5ew6"]
+[ext_resource type="PackedScene" uid="uid://jgy6vw3dctl2" path="res://arcade game/common/to_collect_entry.tscn" id="9_goln3"]
+[ext_resource type="Texture2D" uid="uid://bp7bfoootj368" path="res://arcade game/arcade3/imgarcade3/ant.png" id="10_nbhky"]
+[ext_resource type="Texture2D" uid="uid://fl6o6grcyoq0" path="res://arcade game/arcade3/imgarcade3/nematode.png" id="11_5lqbt"]
+[ext_resource type="Texture2D" uid="uid://bpevji7y1lqno" path="res://arcade game/arcade3/imgarcade3/red-velvet-mite.png" id="12_10d3y"]
+[ext_resource type="Texture2D" uid="uid://1rrwtankbvv0" path="res://arcade game/arcade3/imgarcade3/rotifer.png" id="13_7hpnr"]
+[ext_resource type="PackedScene" uid="uid://c4ql23k3cwu62" path="res://arcade game/common/arcade_win_screen.tscn" id="18_k6lq2"]
+[ext_resource type="PackedScene" uid="uid://qef6ohwob7l8" path="res://arcade game/common/arcade_lose_screen.tscn" id="19_exa25"]
+[ext_resource type="Texture2D" uid="uid://bw0tmxvmedsqd" path="res://images/menu-UI/UI_settings_popout.png" id="20_ushx8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5rnw"]
+bg_color = Color(0.14901961, 0.36862746, 1, 1)
+corner_radius_top_left = 800
+corner_radius_top_right = 800
+corner_radius_bottom_right = 800
+corner_radius_bottom_left = 800
+corner_detail = 16
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8mt0l"]
+radius = 79.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8mt0l"]
+bg_color = Color(0, 0, 0, 0.20784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lexek"]
+bg_color = Color(0.7294118, 0.27450982, 0.30980393, 1)
+
+[node name="Arcade3" type="Control" unique_id=1101745373]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0lhym")
+game_number = 3
+metadata/_edit_lock_ = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=505753509]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_00xe0")
+
+[node name="flowers" type="TextureRect" parent="." unique_id=1311752132]
+layout_mode = 0
+offset_left = 717.0
+offset_top = 26.0
+offset_right = 1773.0
+offset_bottom = 1044.0
+texture = ExtResource("3_ud4g8")
+
+[node name="mglass" type="TextureRect" parent="." unique_id=2067280005]
+layout_mode = 0
+offset_left = 699.0
+offset_top = 6.0
+offset_right = 2575.0
+offset_bottom = 1475.0
+texture = ExtResource("4_hyvp4")
+metadata/_edit_lock_ = true
+
+[node name="PanelClip" type="Panel" parent="." unique_id=180829912]
+visible = false
+layout_mode = 0
+offset_left = 757.0
+offset_top = 64.0
+offset_right = 1727.0
+offset_bottom = 1015.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q5rnw")
+
+[node name="CatcherCenter" type="Node2D" parent="." unique_id=331329970]
+unique_name_in_owner = true
+position = Vector2(1252, 533)
+
+[node name="Net" type="Area2D" parent="CatcherCenter" unique_id=202932209]
+position = Vector2(401, -1)
+script = ExtResource("5_ewoq0")
+metadata/_custom_type_script = "uid://injpqni88ybg"
+
+[node name="GrabberArcade2" type="Sprite2D" parent="CatcherCenter/Net" unique_id=1634818409]
+position = Vector2(42, -1)
+texture = ExtResource("6_yt47y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CatcherCenter/Net" unique_id=1524699802]
+shape = SubResource("CircleShape2D_8mt0l")
+
+[node name="Voice" type="AudioStreamPlayer" parent="." unique_id=1279643084]
+stream = ExtResource("7_3ovqg")
+autoplay = true
+bus = &"Voice"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=646381612]
+stream = ExtResource("8_f5ew6")
+bus = &"Voice"
+
+[node name="Title" type="VBoxContainer" parent="." unique_id=500581230]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 110.99999
+offset_right = 790.0
+offset_bottom = 378.0
+rotation = -0.076315336
+
+[node name="TitleLabel" type="RichTextLabel" parent="Title" unique_id=390520321]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 88
+bbcode_enabled = true
+text = "Collect the good bees!"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Title" unique_id=677594818]
+layout_mode = 2
+
+[node name="ScoreLabel" type="RichTextLabel" parent="Title/HBoxContainer" unique_id=475731665]
+layout_mode = 2
+bbcode_enabled = true
+text = "Total score:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ScoreNumber" type="RichTextLabel" parent="Title/HBoxContainer" unique_id=1784965208]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "Total score:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1820829744]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="ToCollectContainer" type="VBoxContainer" parent="MarginContainer" unique_id=830543837]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="ToCollectEntry1" parent="MarginContainer/ToCollectContainer" unique_id=1167188218 instance=ExtResource("9_goln3")]
+layout_mode = 2
+icon_image = ExtResource("10_nbhky")
+obj_name = "Bag"
+min_to_collect = 5
+
+[node name="ToCollectEntry2" parent="MarginContainer/ToCollectContainer" unique_id=3129811 instance=ExtResource("9_goln3")]
+layout_mode = 2
+icon_image = ExtResource("11_5lqbt")
+obj_name = "Bag"
+min_to_collect = 5
+
+[node name="ToCollectEntry3" parent="MarginContainer/ToCollectContainer" unique_id=605044088 instance=ExtResource("9_goln3")]
+layout_mode = 2
+icon_image = ExtResource("12_10d3y")
+obj_name = "Bag"
+min_to_collect = 5
+
+[node name="ToCollectEntry4" parent="MarginContainer/ToCollectContainer" unique_id=148026017 instance=ExtResource("9_goln3")]
+layout_mode = 2
+icon_image = ExtResource("13_7hpnr")
+obj_name = "Rotifer"
+min_to_collect = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1048961903]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_8mt0l")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lexek")
+max_value = 1.0
+value = 0.4
+show_percentage = false
+
+[node name="ArcadeWinScreen" parent="." unique_id=1338078084 instance=ExtResource("18_k6lq2")]
+visible = false
+layout_mode = 1
+
+[node name="ArcadeLoseScreen" parent="." unique_id=72785328 instance=ExtResource("19_exa25")]
+visible = false
+layout_mode = 1
+
+[node name="ButtonSkipIntro" type="TextureButton" parent="." unique_id=1534500963]
+layout_mode = 0
+offset_left = 1481.0
+offset_top = 928.0
+offset_right = 1938.0
+offset_bottom = 1057.0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+texture_normal = ExtResource("20_ushx8")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextLabel" type="RichTextLabel" parent="ButtonSkipIntro" unique_id=1026394096]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Skip Intro"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

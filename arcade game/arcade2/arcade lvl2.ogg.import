@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cytyk7uy8hl3i"
+path="res://.godot/imported/arcade lvl2.ogg-cc878d8919d877766165176e5e70dfff.oggvorbisstr"
+
+[deps]
+
+source_file="res://arcade game/arcade2/arcade lvl2.ogg"
+dest_files=["res://.godot/imported/arcade lvl2.ogg-cc878d8919d877766165176e5e70dfff.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://552rn5sf2vfe"]
+
+[ext_resource type="Script" uid="uid://c6ulwfniyaoxh" path="res://scripts/ArcadeObj.gd" id="1_4frhp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8mt0l"]
+radius = 27.166155
+
+[node name="ArcadeObj" type="Area2D" unique_id=1927570245]
+script = ExtResource("1_4frhp")
+metadata/_custom_type_script = "uid://c6ulwfniyaoxh"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1820324359]
+shape = SubResource("CircleShape2D_8mt0l")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=1418403677]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1811454717]
+rect = Rect2(-86, -86, 172, 172)
