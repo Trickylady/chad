@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciwyf5gfwytlx"]
+[gd_scene format=3 uid="uid://ciwyf5gfwytlx"]
 
 [ext_resource type="Script" uid="uid://bd78x2q3b0js2" path="res://scripts/mng.gd" id="1_dpan8"]
 
-[node name="mng" type="Node"]
+[node name="mng" type="Node" unique_id=1132863490]
 script = ExtResource("1_dpan8")

@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bipqk25swnamv"]
+[gd_scene format=3 uid="uid://bipqk25swnamv"]
 
 [ext_resource type="Texture2D" uid="uid://bbnhv8a0er4dl" path="res://arcade game/arcade2/imgarcade2/grabber_arcade2.png" id="1_ifi4l"]
+[ext_resource type="Script" uid="uid://injpqni88ybg" path="res://arcade game/Catcher.gd" id="1_ogcie"]
 
-[node name="Net" type="Node2D"]
+[node name="Net" type="Node2D" unique_id=991857623]
+script = ExtResource("1_ogcie")
 
-[node name="GrabberArcade2" type="Sprite2D" parent="."]
+[node name="GrabberArcade2" type="Sprite2D" parent="." unique_id=1634818409]
 position = Vector2(37, 10)
 texture = ExtResource("1_ifi4l")
