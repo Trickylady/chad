@@ -1,32 +1,35 @@
-[gd_scene load_steps=6 format=3 uid="uid://wb42pmyrhgrt"]
+[gd_scene format=3 uid="uid://wb42pmyrhgrt"]
 
+[ext_resource type="Script" uid="uid://tm2okvq1dtaj" path="res://walkingsimulator/walkingsim_1.gd" id="1_rme55"]
 [ext_resource type="Texture2D" uid="uid://dk6qedqjis0oi" path="res://images/game/backgroundchad.png" id="1_wapqh"]
 [ext_resource type="Texture2D" uid="uid://bpkiwyhq4p6ew" path="res://images/game/backgroundpoppy.png" id="2_1uca1"]
 [ext_resource type="PackedScene" uid="uid://dku1iree58omq" path="res://scenes/chad.tscn" id="3_8ne48"]
 [ext_resource type="Texture2D" uid="uid://mvnyl8nwm0km" path="res://images/game/foregroundpoppy.png" id="4_blpkr"]
 [ext_resource type="Texture2D" uid="uid://bs3f5jvihy143" path="res://images/game/forgroundchad.png" id="5_rsi1j"]
 
-[node name="gamechad" type="Node2D"]
+[node name="gamechad" type="Node2D" unique_id=862318510]
+script = ExtResource("1_rme55")
 
-[node name="background" type="TextureRect" parent="."]
+[node name="background" type="TextureRect" parent="." unique_id=427564585]
 z_index = -1
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_wapqh")
 
-[node name="Backgroundpoppy" type="Sprite2D" parent="."]
+[node name="Backgroundpoppy" type="Sprite2D" parent="." unique_id=470866998]
 position = Vector2(1937.5, 652)
 texture = ExtResource("2_1uca1")
 
-[node name="chad" parent="." instance=ExtResource("3_8ne48")]
+[node name="chad" parent="." unique_id=1109402285 instance=ExtResource("3_8ne48")]
 position = Vector2(402.99997, 748)
 scale = Vector2(0.525, 0.525)
 
-[node name="Foregroundpoppy" type="Sprite2D" parent="."]
+[node name="Foregroundpoppy" type="Sprite2D" parent="." unique_id=1551270582]
 position = Vector2(1937.5, 657)
 texture = ExtResource("4_blpkr")
 
-[node name="foreground" type="TextureRect" parent="."]
+[node name="foreground" type="TextureRect" parent="." unique_id=1237739192]
+visible = false
 offset_right = 6943.0
 offset_bottom = 1080.0
 texture = ExtResource("5_rsi1j")

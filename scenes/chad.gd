@@ -40,3 +40,7 @@ func _on_buttleftleg_pressed() -> void:
 func _on_buttrightleg_pressed() -> void:
 	foot_right_pressed = true
 	either = true
+	
+func _ready() -> void:
+	print("Chad's script is running!")
+	animation_tree.active = true

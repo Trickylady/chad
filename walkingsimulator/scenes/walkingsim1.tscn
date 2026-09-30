@@ -1,3 +1,26 @@
 [gd_scene format=3 uid="uid://bixm8nvnoxrw5"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" uid="uid://bem10qxd88k03" path="res://walkingsimulator/scripts/walkingsim_1.gd" id="1_82j0m"]
+[ext_resource type="Texture2D" uid="uid://drxyyxtokbqe7" path="res://walkingsimulator/walkingsimIMG/Walkingsimulator1/grass background.png" id="1_hek4p"]
+[ext_resource type="PackedScene" uid="uid://dku1iree58omq" path="res://scenes/chad.tscn" id="2_82j0m"]
+[ext_resource type="Texture2D" uid="uid://b0n1obqdbn44u" path="res://walkingsimulator/walkingsimIMG/Walkingsimulator1/frontbushes.png" id="2_hfh77"]
+
+[node name="Walkingsim1" type="Node2D" unique_id=1042953926]
+script = ExtResource("1_82j0m")
+
+[node name="grass" type="TextureRect" parent="." unique_id=1350796328]
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 5598.0
+offset_bottom = 1078.0
+texture = ExtResource("1_hek4p")
+
+[node name="chad" parent="." unique_id=161986547 instance=ExtResource("2_82j0m")]
+position = Vector2(756, 795)
+scale = Vector2(0.5, 0.5)
+
+[node name="bushes" type="TextureRect" parent="." unique_id=2116464204]
+offset_top = 731.0
+offset_right = 5596.0
+offset_bottom = 1080.0
+texture = ExtResource("2_hfh77")
