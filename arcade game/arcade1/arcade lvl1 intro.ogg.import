@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ccb6j5kuxaw13"
+path="res://.godot/imported/arcade lvl1 intro.ogg-07596ae0cfe40395f585042841f4ad37.oggvorbisstr"
+
+[deps]
+
+source_file="res://arcade game/arcade1/arcade lvl1 intro.ogg"
+dest_files=["res://.godot/imported/arcade lvl1 intro.ogg-07596ae0cfe40395f585042841f4ad37.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

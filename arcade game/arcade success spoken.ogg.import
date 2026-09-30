@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c6k6g75pyqp55"
+path="res://.godot/imported/arcade success spoken.ogg-e6db978addda1f30cd5cbdddf89f1d52.oggvorbisstr"
+
+[deps]
+
+source_file="res://arcade game/arcade success spoken.ogg"
+dest_files=["res://.godot/imported/arcade success spoken.ogg-e6db978addda1f30cd5cbdddf89f1d52.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
