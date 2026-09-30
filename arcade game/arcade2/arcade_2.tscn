@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bipqk25swnamv" path="res://arcade game/arcade2/net.tscn" id="4_lh2y3"]
 [ext_resource type="PackedScene" uid="uid://00bsen0o6cxl" path="res://arcade game/arcade2/obj/hoverfly.tscn" id="5_3xtia"]
 [ext_resource type="AudioStream" uid="uid://dc3jm36tskxoi" path="res://arcade game/arcade2/immersing-into-electro-swing-152574.mp3" id="6_ffts2"]
+[ext_resource type="AudioStream" uid="uid://4m84b24l4yc2" path="res://arcade game/arcade2/arcade lvl2 intro.ogg" id="6_gp1c6"]
 [ext_resource type="PackedScene" uid="uid://cmi31bm3m00ox" path="res://arcade game/arcade2/obj/scorpionfly.tscn" id="6_p7eox"]
 [ext_resource type="PackedScene" uid="uid://jgy6vw3dctl2" path="res://arcade game/common/to_collect_entry.tscn" id="7_sqhda"]
 [ext_resource type="Texture2D" uid="uid://dsje0dpllac3a" path="res://arcade game/arcade2/imgarcade2/bumblebeeB.png" id="9_6s4hk"]
@@ -16,6 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://3iyw6ecnll0r" path="res://arcade game/arcade2/imgarcade2/honeybeeB.png" id="11_3xtia"]
 [ext_resource type="Texture2D" uid="uid://b0l3byfpy82u5" path="res://arcade game/arcade2/imgarcade2/hoverflyB.png" id="12_p7eox"]
 [ext_resource type="Texture2D" uid="uid://cxnd1akp5k8f5" path="res://arcade game/arcade2/imgarcade2/AsianhornetA.png" id="12_xikv6"]
+[ext_resource type="PackedScene" uid="uid://c4ql23k3cwu62" path="res://arcade game/common/arcade_win_screen.tscn" id="17_o652w"]
+[ext_resource type="Texture2D" uid="uid://bw0tmxvmedsqd" path="res://images/menu-UI/UI_settings_popout.png" id="18_gp1c6"]
+[ext_resource type="PackedScene" uid="uid://qef6ohwob7l8" path="res://arcade game/common/arcade_lose_screen.tscn" id="18_xwt5i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5rnw"]
 bg_color = Color(0.14901961, 0.36862746, 1, 1)
@@ -39,9 +43,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_firqu")
-game_number = null
-voice_line_path = null
-turn_speed = null
+game_number = 2
 metadata/_edit_lock_ = true
 
 [node name="Background" type="TextureRect" parent="." unique_id=505753509]
@@ -65,6 +67,7 @@ offset_top = 6.0
 offset_right = 2575.0
 offset_bottom = 1475.0
 texture = ExtResource("9_xikv6")
+metadata/_edit_lock_ = true
 
 [node name="PanelClip" type="Panel" parent="." unique_id=180829912]
 visible = false
@@ -83,6 +86,7 @@ position = Vector2(1252, 533)
 position = Vector2(401, -1)
 
 [node name="Voice" type="AudioStreamPlayer" parent="." unique_id=1279643084]
+stream = ExtResource("6_gp1c6")
 autoplay = true
 bus = &"Voice"
 
@@ -193,3 +197,38 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_lexek")
 max_value = 1.0
 value = 0.4
 show_percentage = false
+
+[node name="ArcadeWinScreen" parent="." unique_id=1338078084 instance=ExtResource("17_o652w")]
+visible = false
+layout_mode = 1
+
+[node name="ArcadeLoseScreen" parent="." unique_id=72785328 instance=ExtResource("18_xwt5i")]
+layout_mode = 1
+
+[node name="ButtonSkipIntro" type="TextureButton" parent="." unique_id=552592615]
+layout_mode = 0
+offset_left = 1481.0
+offset_top = 928.0
+offset_right = 1938.0
+offset_bottom = 1057.0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+texture_normal = ExtResource("18_gp1c6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextLabel" type="RichTextLabel" parent="ButtonSkipIntro" unique_id=1308100093]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Skip Intro"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

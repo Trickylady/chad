@@ -3,7 +3,6 @@ extends Control
 
 
 @export var game_number: int = 1
-@export_file("*.ogg") var voice_line_path: String
 @export var turn_speed: float = 5.0
 
 
@@ -14,6 +13,10 @@ extends Control
 @onready var music: AudioStreamPlayer = $Music
 @onready var progress_bar: ProgressBar = $ProgressBar
 @onready var panel_clip: Panel = $PanelClip
+
+@onready var button_skip_intro: TextureButton = $ButtonSkipIntro
+@onready var arcade_win_screen: ArcadeWinScreen = $ArcadeWinScreen
+@onready var arcade_lose_screen: ArcadeLoseScreen = $ArcadeLoseScreen
 
 var is_started: bool
 var points: int: set = _set_points
@@ -34,8 +37,11 @@ func _ready() -> void:
 	_catcher = catcher_center.get_child(0)
 	_catcher_initial_angle = _catcher.position.angle()
 	_catcher.obj_collected.connect(_on_catcher_obj_collected)
+	button_skip_intro.pressed.connect(_skip_voice_intro)
+	
 	music.finished.connect(_on_music_finished)
 	_music_duration = music.stream.get_length()
+	
 	_entries = to_collect_container.get_children()
 	
 	progress_bar.hide()
@@ -48,15 +54,19 @@ func _ready() -> void:
 
 
 func _start() -> void:
+	button_skip_intro.visible = voice.stream != null
 	if voice.stream:
 		voice.finished.connect(restart)
 		_music_duration = voice.stream.get_length()
+		voice.play()
+		
 	else:
 		await get_tree().create_timer(3.0).timeout
 		restart()
 
 
 func restart() -> void:
+	button_skip_intro.hide()
 	progress_bar.visible = _music_duration != 0.0
 	progress_bar.value = 0.0
 	points = 0
@@ -79,7 +89,14 @@ func _start_spawn() -> void:
 
 
 func _stop() -> void:
+	music.stop()
 	is_started = false
+	if _has_collected_all():
+		arcade_win_screen.show()
+	else:
+		if not arcade_lose_screen.retry_pressed.is_connected(restart):
+			arcade_lose_screen.retry_pressed.connect(restart)
+		arcade_lose_screen.show()
 
 
 func _process(delta: float) -> void:
@@ -114,7 +131,12 @@ func _spawn_next() -> void:
 	var entry: ToCollectEntry = _entries[new_obj_id]
 	var scene_pack: PackedScene = entry.obj_scene
 	
-	var new_obj: ArcadeObj = scene_pack.instantiate()
+	var new_obj: ArcadeObj
+	if not scene_pack:
+		new_obj = preload("uid://552rn5sf2vfe").instantiate()
+		new_obj.custom_sprite_img = entry.icon_image
+	else:
+		new_obj = scene_pack.instantiate()
 	new_obj.idx = entry.idx
 	new_obj.rotation = randf() * TAU
 	
@@ -145,6 +167,8 @@ func _set_points(value: int) -> void:
 
 
 func _on_catcher_obj_collected(obj: ArcadeObj) -> void:
+	if not is_started:
+		return
 	var idx: int = obj.idx
 	var entry: ToCollectEntry = _entries[idx]
 	entry.collected += 1
@@ -159,3 +183,12 @@ func _on_catcher_obj_collected(obj: ArcadeObj) -> void:
 
 func _on_music_finished() -> void:
 	_stop()
+
+
+func _skip_voice_intro() -> void:
+	voice.stop()
+	restart()
+
+
+func continue_to_next_area() -> void:
+	print("Continue to next area")

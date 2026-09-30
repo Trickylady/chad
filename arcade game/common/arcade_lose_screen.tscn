@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://qef6ohwob7l8"]
+
+[ext_resource type="Texture2D" uid="uid://bwwfwbt078cx0" path="res://images/menu-UI/UI_died_screen.png" id="1_a7wxt"]
+[ext_resource type="Script" uid="uid://c7g38svpwtoud" path="res://arcade game/common/arcade_lose_screen.gd" id="1_pibjt"]
+[ext_resource type="Texture2D" uid="uid://bmu3ixgi8ddrj" path="res://images/menu-UI/UI_but_rewind_1.png" id="2_pibjt"]
+[ext_resource type="Texture2D" uid="uid://d33sml4pysq4w" path="res://images/menu-UI/UI_but_rewind_2.png" id="3_f2rgh"]
+[ext_resource type="Texture2D" uid="uid://b2ls8vjgq3d8y" path="res://images/menu-UI/UI_but_rewind_3.png" id="4_73o76"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8mt0l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pibjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f2rgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_73o76")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ArcadeLoseScreen" type="CenterContainer" unique_id=72785328]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pibjt")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1766154008]
+layout_mode = 2
+texture = ExtResource("1_a7wxt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="bg" unique_id=369921907]
+layout_mode = 0
+offset_left = 361.5766
+offset_top = 75.94665
+offset_right = 1232.05
+offset_bottom = 535.79785
+rotation = 0.2984981
+
+[node name="TitleLabel" type="RichTextLabel" parent="bg/VBoxContainer" unique_id=1268851231]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 88
+bbcode_enabled = true
+text = "Oh no!"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="bg/VBoxContainer" unique_id=1105049125]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="TextLabel" type="RichTextLabel" parent="bg/VBoxContainer" unique_id=1245417720]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "What did you do!
+You didn't collect all of them!
+Wanna retry?"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 2
+
+[node name="RewindAnim" type="AnimatedSprite2D" parent="bg" unique_id=1721744205]
+position = Vector2(690, 575)
+sprite_frames = SubResource("SpriteFrames_8mt0l")
+autoplay = "default"
+frame_progress = 0.44291
+
+[node name="ButtonRetry" type="Button" parent="bg/RewindAnim" unique_id=502768653]
+offset_left = -98.0
+offset_top = -80.0
+offset_right = 104.0
+offset_bottom = 78.0
+flat = true
+
+[connection signal="pressed" from="bg/RewindAnim/ButtonRetry" to="." method="_on_button_retry_pressed"]

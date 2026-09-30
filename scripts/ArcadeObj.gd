@@ -9,12 +9,17 @@ extends Area2D
 @onready var visible_on_screen_notifier_2d: VisibleOnScreenNotifier2D = $VisibleOnScreenNotifier2D
 
 var idx: int
+var custom_sprite_img: Texture2D
 
 var _initial_rotation: float
 var _spawn_time: float
 
 
 func _ready() -> void:
+	if custom_sprite_img:
+		var sprite := Sprite2D.new()
+		sprite.texture = custom_sprite_img
+		add_child(sprite)
 	visible_on_screen_notifier_2d.screen_exited.connect(queue_free)
 	_initial_rotation = randf() * TAU
 
