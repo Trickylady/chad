@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bcxf4mplio254"
+path="res://.godot/imported/1 this is chad.ogg-62a348b1414a75abc4b4905791e2973e.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/1 this is chad.ogg"
+dest_files=["res://.godot/imported/1 this is chad.ogg-62a348b1414a75abc4b4905791e2973e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

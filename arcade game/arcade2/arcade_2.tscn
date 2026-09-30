@@ -41,10 +41,10 @@ texture = ExtResource("1_psncv")
 
 [node name="flowers" type="TextureRect" parent="." unique_id=1311752132]
 layout_mode = 0
-offset_left = 699.0
-offset_top = 6.0
-offset_right = 1755.0
-offset_bottom = 1024.0
+offset_left = 717.0
+offset_top = 26.0
+offset_right = 1773.0
+offset_bottom = 1044.0
 texture = ExtResource("2_lh2y3")
 
 [node name="mglass" type="TextureRect" parent="." unique_id=2067280005]
@@ -130,7 +130,7 @@ min_to_collect = 5
 [node name="ToCollectEntry2" parent="MarginContainer/ToCollectContainer" unique_id=1614689134 instance=ExtResource("7_sqhda")]
 layout_mode = 2
 icon_image = ExtResource("9_6s4hk")
-obj_name = "Bumblebee"
+obj_name = "Male Bumblebee"
 obj_scene = ExtResource("3_xikv6")
 points_given = -20
 good_to_collect = false
@@ -138,14 +138,14 @@ good_to_collect = false
 [node name="ToCollectEntry3" parent="MarginContainer/ToCollectContainer" unique_id=871116908 instance=ExtResource("7_sqhda")]
 layout_mode = 2
 icon_image = ExtResource("11_3xtia")
-obj_name = "Honeybee"
+obj_name = "Female Honeybee"
 obj_scene = ExtResource("4_6s4hk")
 min_to_collect = 3
 
 [node name="ToCollectEntry4" parent="MarginContainer/ToCollectContainer" unique_id=119956671 instance=ExtResource("7_sqhda")]
 layout_mode = 2
 icon_image = ExtResource("12_p7eox")
-obj_name = "Hoverfly"
+obj_name = "Marmalade Hoverfly"
 obj_scene = ExtResource("5_3xtia")
 points_given = -10
 good_to_collect = false
