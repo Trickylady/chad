@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://sti5ab1jkyy3"]
+[gd_scene format=3 uid="uid://sti5ab1jkyy3"]
 
 [ext_resource type="Script" uid="uid://crtquveixgft1" path="res://mainmenu.gd" id="1_fsdjo"]
 [ext_resource type="Texture2D" uid="uid://f1hnr7xkha8y" path="res://images/menu-UI/menubg.png" id="1_s5g8n"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cry2oft1eccgo" path="res://images/menu-UI/but_back.png" id="14_6pj40"]
 [ext_resource type="Texture2D" uid="uid://bo0rxnif6bdvo" path="res://images/menu-UI/but_back_hov.png" id="15_nkpmc"]
 [ext_resource type="Theme" uid="uid://bnudt8xyp2jkf" path="res://themes/maintheme.tres" id="18_prb5i"]
+[ext_resource type="AudioStream" uid="uid://cvrj0cx1x2gxk" path="res://music/electro-swing-jazz-short-236102.mp3" id="19_xwyuh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h73c4"]
 animations = [{
@@ -34,33 +35,33 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_wf3n4")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 6.0
 }]
 
-[node name="mainmenu" type="Node2D"]
+[node name="mainmenu" type="Node2D" unique_id=1826247066]
 script = ExtResource("1_fsdjo")
 
-[node name="background" type="TextureRect" parent="."]
+[node name="background" type="TextureRect" parent="." unique_id=341915997]
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_s5g8n")
 
-[node name="tabbg" type="TextureRect" parent="."]
+[node name="tabbg" type="TextureRect" parent="." unique_id=140725468]
 offset_left = 870.0
 offset_top = 97.0
 offset_right = 1849.0
 offset_bottom = 982.0
 texture = ExtResource("3_prb5i")
 
-[node name="logo" type="AnimatedSprite2D" parent="."]
+[node name="logo" type="AnimatedSprite2D" parent="." unique_id=140337425]
 position = Vector2(407, 385)
 sprite_frames = SubResource("SpriteFrames_h73c4")
 autoplay = "default"
 frame_progress = 0.6424372
 
-[node name="ButBack" type="TextureButton" parent="." groups=["hover_left"]]
+[node name="ButBack" type="TextureButton" parent="." unique_id=1914558556 groups=["hover_left"]]
 offset_left = 1457.0
 offset_top = 918.00006
 offset_right = 1897.0
@@ -71,10 +72,10 @@ texture_normal = ExtResource("14_6pj40")
 texture_pressed = ExtResource("15_nkpmc")
 texture_hover = ExtResource("15_nkpmc")
 
-[node name="buttons" type="Node2D" parent="."]
+[node name="buttons" type="Node2D" parent="." unique_id=1327036694]
 visible = false
 
-[node name="ButStart" type="TextureButton" parent="buttons" groups=["hover_right"]]
+[node name="ButStart" type="TextureButton" parent="buttons" unique_id=614837830 groups=["hover_right"]]
 offset_left = 1118.0
 offset_top = 286.0
 offset_right = 1627.0
@@ -85,7 +86,7 @@ texture_normal = ExtResource("6_wf3n4")
 texture_pressed = ExtResource("7_uui5l")
 texture_hover = ExtResource("7_uui5l")
 
-[node name="ButSettings" type="TextureButton" parent="buttons" groups=["hover_left"]]
+[node name="ButSettings" type="TextureButton" parent="buttons" unique_id=1624744037 groups=["hover_left"]]
 offset_left = 915.99994
 offset_top = 450.0
 offset_right = 1562.0
@@ -96,7 +97,7 @@ texture_normal = ExtResource("7_h73c4")
 texture_pressed = ExtResource("9_gjjcl")
 texture_hover = ExtResource("9_gjjcl")
 
-[node name="ButCredits" type="TextureButton" parent="buttons" groups=["hover_right"]]
+[node name="ButCredits" type="TextureButton" parent="buttons" unique_id=1346957477 groups=["hover_right"]]
 offset_left = 1100.0
 offset_top = 664.0
 offset_right = 1629.0
@@ -107,7 +108,7 @@ texture_normal = ExtResource("8_uui5l")
 texture_pressed = ExtResource("11_kait0")
 texture_hover = ExtResource("11_kait0")
 
-[node name="ButExit" type="TextureButton" parent="buttons" groups=["hover_right"]]
+[node name="ButExit" type="TextureButton" parent="buttons" unique_id=395736330 groups=["hover_right"]]
 offset_left = 1611.0
 offset_top = 937.0
 offset_right = 1953.0
@@ -118,10 +119,10 @@ texture_normal = ExtResource("9_4hago")
 texture_pressed = ExtResource("13_6pj40")
 texture_hover = ExtResource("13_6pj40")
 
-[node name="CreditsTab" type="Node2D" parent="."]
+[node name="CreditsTab" type="Node2D" parent="." unique_id=40158762]
 visible = false
 
-[node name="creditstext" type="RichTextLabel" parent="CreditsTab"]
+[node name="creditstext" type="RichTextLabel" parent="CreditsTab" unique_id=98922256]
 offset_left = 923.3388
 offset_top = 327.1694
 offset_right = 1736.3533
@@ -138,7 +139,7 @@ Code
 Music & SFX
 [font_size=40]Pixabay[/font_size]"
 
-[node name="Credits" type="Label" parent="CreditsTab"]
+[node name="Credits" type="Label" parent="CreditsTab" unique_id=2081889706]
 offset_left = 1474.9999
 offset_top = 166.0
 offset_right = 1744.9999
@@ -148,9 +149,9 @@ size_flags_horizontal = 0
 theme = ExtResource("18_prb5i")
 text = "Credits."
 
-[node name="SettingsTab" type="Node2D" parent="."]
+[node name="SettingsTab" type="Node2D" parent="." unique_id=1728625547]
 
-[node name="Master" type="RichTextLabel" parent="SettingsTab"]
+[node name="Master" type="RichTextLabel" parent="SettingsTab" unique_id=1465238269]
 offset_left = 923.3388
 offset_top = 327.1694
 offset_right = 1736.3533
@@ -160,7 +161,7 @@ theme = ExtResource("18_prb5i")
 bbcode_enabled = true
 text = "Master"
 
-[node name="Master_slider" type="HSlider" parent="SettingsTab"]
+[node name="Master_slider" type="HSlider" parent="SettingsTab" unique_id=227833314]
 offset_left = 945.0
 offset_top = 414.0
 offset_right = 1709.0
@@ -170,7 +171,7 @@ theme = ExtResource("18_prb5i")
 max_value = 1.0
 step = 0.01
 
-[node name="Music" type="RichTextLabel" parent="SettingsTab"]
+[node name="Music" type="RichTextLabel" parent="SettingsTab" unique_id=1926603500]
 offset_left = 948.0
 offset_top = 524.0
 offset_right = 1761.0144
@@ -180,7 +181,7 @@ theme = ExtResource("18_prb5i")
 bbcode_enabled = true
 text = "Music"
 
-[node name="Music_slider" type="HSlider" parent="SettingsTab"]
+[node name="Music_slider" type="HSlider" parent="SettingsTab" unique_id=698150622]
 offset_left = 966.00006
 offset_top = 623.00006
 offset_right = 1730.0
@@ -191,7 +192,7 @@ theme_type_variation = &"music_slider"
 max_value = 1.0
 step = 0.01
 
-[node name="SFX" type="RichTextLabel" parent="SettingsTab"]
+[node name="SFX" type="RichTextLabel" parent="SettingsTab" unique_id=1190192894]
 offset_left = 977.00006
 offset_top = 735.00006
 offset_right = 1790.0144
@@ -201,7 +202,7 @@ theme = ExtResource("18_prb5i")
 bbcode_enabled = true
 text = "SFX"
 
-[node name="SFX_slider" type="HSlider" parent="SettingsTab"]
+[node name="SFX_slider" type="HSlider" parent="SettingsTab" unique_id=1312873081]
 offset_left = 995.00006
 offset_top = 824.00006
 offset_right = 1759.0
@@ -212,7 +213,7 @@ theme_type_variation = &"SFX_slider"
 max_value = 1.0
 step = 0.01
 
-[node name="Settings" type="Label" parent="SettingsTab"]
+[node name="Settings" type="Label" parent="SettingsTab" unique_id=1191021557]
 offset_left = 1474.9999
 offset_top = 166.0
 offset_right = 1744.9999
@@ -221,6 +222,11 @@ rotation = -0.11492607
 size_flags_horizontal = 0
 theme = ExtResource("18_prb5i")
 text = "Settings."
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1182829041]
+stream = ExtResource("19_xwyuh")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="ButBack" to="." method="_on_but_back_pressed"]
 [connection signal="pressed" from="buttons/ButStart" to="." method="_on_but_start_pressed"]

@@ -1,20 +1,38 @@
 [gd_scene format=3 uid="uid://bml32irxgeiu7"]
 
+[ext_resource type="Script" uid="uid://v83n0jojjwv2" path="res://arcade game/arcadescript.gd" id="1_firqu"]
 [ext_resource type="Texture2D" uid="uid://c6pgikccqi4ui" path="res://arcade game/arcade2/imgarcade2/bg-arcade2.png" id="1_psncv"]
 [ext_resource type="Texture2D" uid="uid://b8gbatl4djw7" path="res://arcade game/arcade2/imgarcade2/flowers.png" id="2_lh2y3"]
+[ext_resource type="PackedScene" uid="uid://b127kbu00ac05" path="res://arcade game/arcade2/asianhornet.tscn" id="2_wfygq"]
 [ext_resource type="Texture2D" uid="uid://b3f6vj4j7efwr" path="res://arcade game/arcade2/imgarcade2/area-arcade2.png" id="3_firqu"]
+[ext_resource type="PackedScene" uid="uid://dfto688imvnwm" path="res://arcade game/arcade2/bumblebee.tscn" id="3_xikv6"]
+[ext_resource type="PackedScene" uid="uid://rjg0lumxy0bo" path="res://arcade game/arcade2/honeybee.tscn" id="4_6s4hk"]
 [ext_resource type="PackedScene" uid="uid://bipqk25swnamv" path="res://arcade game/arcade2/net.tscn" id="4_lh2y3"]
-[ext_resource type="Script" uid="uid://bmma7asspo7is" path="res://godot-sandbox/BeatmapGenerator/beatmap_generator.gd" id="5_wbqo7"]
+[ext_resource type="PackedScene" uid="uid://00bsen0o6cxl" path="res://arcade game/arcade2/hoverfly.tscn" id="5_3xtia"]
 [ext_resource type="AudioStream" uid="uid://dc3jm36tskxoi" path="res://arcade game/arcade2/immersing-into-electro-swing-152574.mp3" id="6_ffts2"]
+[ext_resource type="PackedScene" uid="uid://cmi31bm3m00ox" path="res://arcade game/arcade2/scorpionfly.tscn" id="6_p7eox"]
 
-[node name="Arcade2" type="Node2D" unique_id=1026039029]
+[node name="Arcade2" type="Control" unique_id=1101745373]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_firqu")
+obj_to_spawn = Array[PackedScene]([ExtResource("2_wfygq"), ExtResource("3_xikv6"), ExtResource("4_6s4hk"), ExtResource("5_3xtia"), ExtResource("6_p7eox")])
+count_to_spawn = Array[int]([5, 5, 5, 5, 5])
+count_min_to_collect = Array[int]([0, 0, 0, 0, 0])
+metadata/_edit_lock_ = true
 
 [node name="backgroundarcade2" type="TextureRect" parent="." unique_id=505753509]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_psncv")
 
 [node name="flowers" type="TextureRect" parent="." unique_id=1311752132]
+layout_mode = 0
 offset_left = 699.0
 offset_top = 6.0
 offset_right = 1755.0
@@ -22,20 +40,21 @@ offset_bottom = 1024.0
 texture = ExtResource("2_lh2y3")
 
 [node name="mglass" type="TextureRect" parent="." unique_id=2067280005]
+layout_mode = 0
 offset_left = 699.0
 offset_top = 6.0
 offset_right = 2575.0
 offset_bottom = 1475.0
 texture = ExtResource("3_firqu")
 
-[node name="Net" parent="." unique_id=202932209 instance=ExtResource("4_lh2y3")]
-position = Vector2(1653, 532)
+[node name="CatcherCenter" type="Node2D" parent="." unique_id=331329970]
+position = Vector2(1252, 533)
 
-[node name="Node2D" type="Node2D" parent="." unique_id=761087253]
-script = ExtResource("5_wbqo7")
-Music = ExtResource("6_ffts2")
+[node name="Net" parent="CatcherCenter" unique_id=202932209 instance=ExtResource("4_lh2y3")]
+position = Vector2(401, -1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1781696715]
+layout_mode = 0
 offset_left = 75.0
 offset_top = 941.0
 offset_right = 250.0
@@ -44,8 +63,17 @@ text = "0/3 Honeybees
 0/3 Hornets"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=475731665]
+layout_mode = 0
 offset_left = 44.0
 offset_top = 41.0
 offset_right = 592.0
 offset_bottom = 229.0
 text = "score:"
+
+[node name="Voice" type="AudioStreamPlayer" parent="." unique_id=1279643084]
+autoplay = true
+bus = &"Voice"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=646381612]
+stream = ExtResource("6_ffts2")
+bus = &"Voice"
