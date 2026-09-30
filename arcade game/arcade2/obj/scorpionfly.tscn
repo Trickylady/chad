@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmi31bm3m00ox"]
+[gd_scene format=3 uid="uid://cmi31bm3m00ox"]
 
 [ext_resource type="Texture2D" uid="uid://bkqarhvg7ydv3" path="res://arcade game/arcade2/imgarcade2/scorpionflyA.png" id="1_cr6m0"]
+[ext_resource type="Script" uid="uid://c6ulwfniyaoxh" path="res://scripts/ArcadeObj.gd" id="1_xvt6e"]
 [ext_resource type="Texture2D" uid="uid://c51vwd8ph718g" path="res://arcade game/arcade2/imgarcade2/scorpionflyB.png" id="2_h6ljo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qxlbe"]
@@ -12,15 +13,23 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_h6ljo")
 }],
-"loop": true,
+"loop": 1,
 "name": &"scorpionflymove",
 "speed": 10.0
 }]
 
-[node name="Scorpionfly" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_dacw8"]
+radius = 61.0
 
-[node name="scorpionfly" type="AnimatedSprite2D" parent="."]
+[node name="Scorpionfly" type="Area2D" unique_id=1778218391]
+script = ExtResource("1_xvt6e")
+metadata/_custom_type_script = "uid://c6ulwfniyaoxh"
+
+[node name="scorpionfly" type="AnimatedSprite2D" parent="." unique_id=283227031]
 sprite_frames = SubResource("SpriteFrames_qxlbe")
 animation = &"scorpionflymove"
 autoplay = "scorpionflymove"
 frame_progress = 0.8314875
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=309422714]
+shape = SubResource("CircleShape2D_dacw8")

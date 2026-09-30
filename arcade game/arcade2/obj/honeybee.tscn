@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://rjg0lumxy0bo"]
+[gd_scene format=3 uid="uid://rjg0lumxy0bo"]
 
+[ext_resource type="Script" uid="uid://c6ulwfniyaoxh" path="res://scripts/ArcadeObj.gd" id="1_54n5r"]
 [ext_resource type="Texture2D" uid="uid://dcx08c71ly5or" path="res://arcade game/arcade2/imgarcade2/honeybeeA.png" id="1_p8iic"]
 [ext_resource type="Texture2D" uid="uid://3iyw6ecnll0r" path="res://arcade game/arcade2/imgarcade2/honeybeeB.png" id="2_54n5r"]
 
@@ -12,15 +13,23 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_54n5r")
 }],
-"loop": true,
+"loop": 1,
 "name": &"honeybeemove",
 "speed": 10.0
 }]
 
-[node name="Honeybee" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_c2frm"]
+radius = 61.0
 
-[node name="honeybee" type="AnimatedSprite2D" parent="."]
+[node name="Honeybee" type="Area2D" unique_id=1107276998]
+script = ExtResource("1_54n5r")
+metadata/_custom_type_script = "uid://c6ulwfniyaoxh"
+
+[node name="honeybee" type="AnimatedSprite2D" parent="." unique_id=1124554212]
 sprite_frames = SubResource("SpriteFrames_qxlbe")
 animation = &"honeybeemove"
 autoplay = "honeybeemove"
 frame_progress = 0.6139681
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=553408696]
+shape = SubResource("CircleShape2D_c2frm")

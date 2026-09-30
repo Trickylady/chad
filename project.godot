@@ -35,3 +35,7 @@ window/stretch/mode="canvas_items"
 
 hover_right="hovers buttons"
 hover_left=""
+
+[gui]
+
+theme/custom="uid://bnudt8xyp2jkf"

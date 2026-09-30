@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://bipqk25swnamv"]
 
 [ext_resource type="Texture2D" uid="uid://bbnhv8a0er4dl" path="res://arcade game/arcade2/imgarcade2/grabber_arcade2.png" id="1_ifi4l"]
-[ext_resource type="Script" uid="uid://injpqni88ybg" path="res://arcade game/Catcher.gd" id="1_ogcie"]
+[ext_resource type="Script" uid="uid://injpqni88ybg" path="res://scripts/Catcher.gd" id="1_ogcie"]
 
-[node name="Net" type="Node2D" unique_id=991857623]
+[sub_resource type="CircleShape2D" id="CircleShape2D_8mt0l"]
+radius = 79.0
+
+[node name="Net" type="Area2D" unique_id=1684154591]
 script = ExtResource("1_ogcie")
+metadata/_custom_type_script = "uid://injpqni88ybg"
 
 [node name="GrabberArcade2" type="Sprite2D" parent="." unique_id=1634818409]
-position = Vector2(37, 10)
+position = Vector2(42, -1)
 texture = ExtResource("1_ifi4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1524699802]
+shape = SubResource("CircleShape2D_8mt0l")

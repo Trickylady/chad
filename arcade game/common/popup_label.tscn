@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cl6d772vmnfmu"]
+
+[ext_resource type="Script" uid="uid://chthk1v4f804c" path="res://arcade game/common/popup_label.gd" id="1_xnk00"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5hxuf"]
+font_size = 42
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="PopupLabel" type="Control" unique_id=460038083]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xnk00")
+
+[node name="Label" type="Label" parent="." unique_id=1092174622]
+z_index = 1
+layout_mode = 0
+offset_left = -357.0
+offset_top = -185.0
+offset_right = 357.0
+offset_bottom = 22.0
+text = "Popup Label"
+label_settings = SubResource("LabelSettings_5hxuf")
+horizontal_alignment = 1
+vertical_alignment = 2

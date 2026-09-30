@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://b127kbu00ac05"]
 
+[ext_resource type="Script" uid="uid://c6ulwfniyaoxh" path="res://scripts/ArcadeObj.gd" id="1_6yg5u"]
 [ext_resource type="Texture2D" uid="uid://cxnd1akp5k8f5" path="res://arcade game/arcade2/imgarcade2/AsianhornetA.png" id="1_25ly6"]
 [ext_resource type="Texture2D" uid="uid://cfm71kbj2eld0" path="res://arcade game/arcade2/imgarcade2/AsianhornetB.png" id="2_6yg5u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8mt0l"]
+radius = 27.166155
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qxlbe"]
 animations = [{
@@ -17,7 +21,12 @@ animations = [{
 "speed": 20.0
 }]
 
-[node name="Asianhornet" type="Node2D" unique_id=2052248080]
+[node name="Asianhornet" type="Area2D" unique_id=1927570245]
+script = ExtResource("1_6yg5u")
+metadata/_custom_type_script = "uid://c6ulwfniyaoxh"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1820324359]
+shape = SubResource("CircleShape2D_8mt0l")
 
 [node name="asianhornet" type="AnimatedSprite2D" parent="." unique_id=895620575]
 sprite_frames = SubResource("SpriteFrames_qxlbe")

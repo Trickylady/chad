@@ -1,16 +1,27 @@
 [gd_scene format=3 uid="uid://bml32irxgeiu7"]
 
-[ext_resource type="Script" uid="uid://v83n0jojjwv2" path="res://arcade game/arcadescript.gd" id="1_firqu"]
+[ext_resource type="Script" uid="uid://v83n0jojjwv2" path="res://scripts/ArcadeGame.gd" id="1_firqu"]
 [ext_resource type="Texture2D" uid="uid://c6pgikccqi4ui" path="res://arcade game/arcade2/imgarcade2/bg-arcade2.png" id="1_psncv"]
 [ext_resource type="Texture2D" uid="uid://b8gbatl4djw7" path="res://arcade game/arcade2/imgarcade2/flowers.png" id="2_lh2y3"]
-[ext_resource type="PackedScene" uid="uid://b127kbu00ac05" path="res://arcade game/arcade2/asianhornet.tscn" id="2_wfygq"]
-[ext_resource type="Texture2D" uid="uid://b3f6vj4j7efwr" path="res://arcade game/arcade2/imgarcade2/area-arcade2.png" id="3_firqu"]
-[ext_resource type="PackedScene" uid="uid://dfto688imvnwm" path="res://arcade game/arcade2/bumblebee.tscn" id="3_xikv6"]
-[ext_resource type="PackedScene" uid="uid://rjg0lumxy0bo" path="res://arcade game/arcade2/honeybee.tscn" id="4_6s4hk"]
+[ext_resource type="PackedScene" uid="uid://b127kbu00ac05" path="res://arcade game/arcade2/obj/asianhornet.tscn" id="2_wfygq"]
+[ext_resource type="PackedScene" uid="uid://dfto688imvnwm" path="res://arcade game/arcade2/obj/bumblebee.tscn" id="3_xikv6"]
+[ext_resource type="PackedScene" uid="uid://rjg0lumxy0bo" path="res://arcade game/arcade2/obj/honeybee.tscn" id="4_6s4hk"]
 [ext_resource type="PackedScene" uid="uid://bipqk25swnamv" path="res://arcade game/arcade2/net.tscn" id="4_lh2y3"]
-[ext_resource type="PackedScene" uid="uid://00bsen0o6cxl" path="res://arcade game/arcade2/hoverfly.tscn" id="5_3xtia"]
+[ext_resource type="PackedScene" uid="uid://00bsen0o6cxl" path="res://arcade game/arcade2/obj/hoverfly.tscn" id="5_3xtia"]
 [ext_resource type="AudioStream" uid="uid://dc3jm36tskxoi" path="res://arcade game/arcade2/immersing-into-electro-swing-152574.mp3" id="6_ffts2"]
-[ext_resource type="PackedScene" uid="uid://cmi31bm3m00ox" path="res://arcade game/arcade2/scorpionfly.tscn" id="6_p7eox"]
+[ext_resource type="PackedScene" uid="uid://cmi31bm3m00ox" path="res://arcade game/arcade2/obj/scorpionfly.tscn" id="6_p7eox"]
+[ext_resource type="PackedScene" uid="uid://jgy6vw3dctl2" path="res://arcade game/common/to_collect_entry.tscn" id="7_sqhda"]
+[ext_resource type="Texture2D" uid="uid://dsje0dpllac3a" path="res://arcade game/arcade2/imgarcade2/bumblebeeB.png" id="9_6s4hk"]
+[ext_resource type="Texture2D" uid="uid://cqla2mcj52xf7" path="res://arcade game/magnifyingglass.png" id="9_xikv6"]
+[ext_resource type="Texture2D" uid="uid://3iyw6ecnll0r" path="res://arcade game/arcade2/imgarcade2/honeybeeB.png" id="11_3xtia"]
+[ext_resource type="Texture2D" uid="uid://b0l3byfpy82u5" path="res://arcade game/arcade2/imgarcade2/hoverflyB.png" id="12_p7eox"]
+[ext_resource type="Texture2D" uid="uid://cxnd1akp5k8f5" path="res://arcade game/arcade2/imgarcade2/AsianhornetA.png" id="12_xikv6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8mt0l"]
+bg_color = Color(0, 0, 0, 0.20784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lexek"]
+bg_color = Color(0.7294118, 0.27450982, 0.30980393, 1)
 
 [node name="Arcade2" type="Control" unique_id=1101745373]
 layout_mode = 3
@@ -20,12 +31,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_firqu")
-obj_to_spawn = Array[PackedScene]([ExtResource("2_wfygq"), ExtResource("3_xikv6"), ExtResource("4_6s4hk"), ExtResource("5_3xtia"), ExtResource("6_p7eox")])
-count_to_spawn = Array[int]([5, 5, 5, 5, 5])
-count_min_to_collect = Array[int]([0, 0, 0, 0, 0])
 metadata/_edit_lock_ = true
 
-[node name="backgroundarcade2" type="TextureRect" parent="." unique_id=505753509]
+[node name="Background" type="TextureRect" parent="." unique_id=505753509]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -45,30 +53,13 @@ offset_left = 699.0
 offset_top = 6.0
 offset_right = 2575.0
 offset_bottom = 1475.0
-texture = ExtResource("3_firqu")
+texture = ExtResource("9_xikv6")
 
 [node name="CatcherCenter" type="Node2D" parent="." unique_id=331329970]
 position = Vector2(1252, 533)
 
 [node name="Net" parent="CatcherCenter" unique_id=202932209 instance=ExtResource("4_lh2y3")]
 position = Vector2(401, -1)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1781696715]
-layout_mode = 0
-offset_left = 75.0
-offset_top = 941.0
-offset_right = 250.0
-offset_bottom = 994.0
-text = "0/3 Honeybees
-0/3 Hornets"
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=475731665]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 41.0
-offset_right = 592.0
-offset_bottom = 229.0
-text = "score:"
 
 [node name="Voice" type="AudioStreamPlayer" parent="." unique_id=1279643084]
 autoplay = true
@@ -77,3 +68,107 @@ bus = &"Voice"
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=646381612]
 stream = ExtResource("6_ffts2")
 bus = &"Voice"
+
+[node name="Title" type="VBoxContainer" parent="." unique_id=500581230]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 110.99999
+offset_right = 790.0
+offset_bottom = 378.0
+rotation = -0.076315336
+
+[node name="TitleLabel" type="RichTextLabel" parent="Title" unique_id=390520321]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 88
+bbcode_enabled = true
+text = "Collect the good bees!"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Title" unique_id=677594818]
+layout_mode = 2
+
+[node name="ScoreLabel" type="RichTextLabel" parent="Title/HBoxContainer" unique_id=475731665]
+layout_mode = 2
+bbcode_enabled = true
+text = "Total score:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ScoreNumber" type="RichTextLabel" parent="Title/HBoxContainer" unique_id=1784965208]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "Total score:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1820829744]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="ToCollectContainer" type="VBoxContainer" parent="MarginContainer" unique_id=830543837]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="ToCollectEntry1" parent="MarginContainer/ToCollectContainer" unique_id=1167188218 instance=ExtResource("7_sqhda")]
+layout_mode = 2
+icon_image = ExtResource("12_xikv6")
+obj_name = "Asian Hornet"
+obj_scene = ExtResource("2_wfygq")
+min_to_collect = 5
+
+[node name="ToCollectEntry2" parent="MarginContainer/ToCollectContainer" unique_id=1614689134 instance=ExtResource("7_sqhda")]
+layout_mode = 2
+icon_image = ExtResource("9_6s4hk")
+obj_name = "Bumblebee"
+obj_scene = ExtResource("3_xikv6")
+points_given = -20
+good_to_collect = false
+
+[node name="ToCollectEntry3" parent="MarginContainer/ToCollectContainer" unique_id=871116908 instance=ExtResource("7_sqhda")]
+layout_mode = 2
+icon_image = ExtResource("11_3xtia")
+obj_name = "Honeybee"
+obj_scene = ExtResource("4_6s4hk")
+min_to_collect = 3
+
+[node name="ToCollectEntry4" parent="MarginContainer/ToCollectContainer" unique_id=119956671 instance=ExtResource("7_sqhda")]
+layout_mode = 2
+icon_image = ExtResource("12_p7eox")
+obj_name = "Hoverfly"
+obj_scene = ExtResource("5_3xtia")
+points_given = -10
+good_to_collect = false
+
+[node name="ToCollectEntry5" parent="MarginContainer/ToCollectContainer" unique_id=101951214 instance=ExtResource("7_sqhda")]
+layout_mode = 2
+icon_image = ExtResource("12_xikv6")
+obj_name = "Scorpionfly"
+obj_scene = ExtResource("6_p7eox")
+points_given = -30
+good_to_collect = false
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1048961903]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_8mt0l")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lexek")
+max_value = 1.0
+value = 0.4
+show_percentage = false

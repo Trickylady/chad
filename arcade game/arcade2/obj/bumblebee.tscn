@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfto688imvnwm"]
+[gd_scene format=3 uid="uid://dfto688imvnwm"]
 
 [ext_resource type="Texture2D" uid="uid://byhchvmuw5wme" path="res://arcade game/arcade2/imgarcade2/bumblebeeA.png" id="1_4xdr7"]
+[ext_resource type="Script" uid="uid://c6ulwfniyaoxh" path="res://scripts/ArcadeObj.gd" id="1_lxkn8"]
 [ext_resource type="Texture2D" uid="uid://dsje0dpllac3a" path="res://arcade game/arcade2/imgarcade2/bumblebeeB.png" id="2_lxkn8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qxlbe"]
@@ -12,15 +13,23 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_lxkn8")
 }],
-"loop": true,
+"loop": 1,
 "name": &"bumblebeemove",
 "speed": 10.0
 }]
 
-[node name="Bumblebee" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_qxlbe"]
+radius = 61.0
 
-[node name="bumblebee" type="AnimatedSprite2D" parent="."]
+[node name="Bumblebee" type="Area2D" unique_id=413265045]
+script = ExtResource("1_lxkn8")
+metadata/_custom_type_script = "uid://c6ulwfniyaoxh"
+
+[node name="bumblebee" type="AnimatedSprite2D" parent="." unique_id=1251638830]
 sprite_frames = SubResource("SpriteFrames_qxlbe")
 animation = &"bumblebeemove"
 autoplay = "bumblebeemove"
 frame_progress = 0.06994093
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=535527311]
+shape = SubResource("CircleShape2D_qxlbe")

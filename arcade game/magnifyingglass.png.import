@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3f6vj4j7efwr"
-path="res://.godot/imported/area-arcade2.png-bdad3330253188fccc8b1d2cf9ebeeec.ctex"
+uid="uid://cqla2mcj52xf7"
+path="res://.godot/imported/magnifyingglass.png-14a648fe4bfc3d86a81d7a21300576d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arcade game/arcade2/imgarcade2/area-arcade2.png"
-dest_files=["res://.godot/imported/area-arcade2.png-bdad3330253188fccc8b1d2cf9ebeeec.ctex"]
+source_file="res://arcade game/magnifyingglass.png"
+dest_files=["res://.godot/imported/magnifyingglass.png-14a648fe4bfc3d86a81d7a21300576d1.ctex"]
 
 [params]
 

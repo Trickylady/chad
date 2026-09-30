@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://jgy6vw3dctl2"]
+
+[ext_resource type="Script" uid="uid://n2n7mdvo8p0p" path="res://arcade game/common/to_collect_entry.gd" id="1_v4hkw"]
+[ext_resource type="Texture2D" uid="uid://cxnd1akp5k8f5" path="res://arcade game/arcade2/imgarcade2/AsianhornetA.png" id="2_5iq37"]
+
+[node name="ToCollectEntry1" type="HBoxContainer" unique_id=1167188218]
+offset_right = 544.0
+offset_bottom = 80.0
+script = ExtResource("1_v4hkw")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=1629289545]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("2_5iq37")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameLabel" type="RichTextLabel" parent="." unique_id=975734762]
+layout_mode = 2
+text = "Honeybees"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="CollectedLabel" type="RichTextLabel" parent="." unique_id=314708550]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0/0"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
