@@ -7,12 +7,13 @@ extends Control
 @export var turn_speed: float = 5.0
 
 
-@onready var catcher_center: Node2D = $CatcherCenter
+@onready var catcher_center: Node2D = %CatcherCenter
 @onready var to_collect_container: VBoxContainer = %ToCollectContainer
 @onready var score_number: RichTextLabel = %ScoreNumber
 @onready var voice: AudioStreamPlayer = $Voice
 @onready var music: AudioStreamPlayer = $Music
 @onready var progress_bar: ProgressBar = $ProgressBar
+@onready var panel_clip: Panel = $PanelClip
 
 var is_started: bool
 var points: int: set = _set_points
@@ -28,13 +29,16 @@ var _spawn_time_since_last: float
 
 
 func _ready() -> void:
+	panel_clip.clip_children = CanvasItem.CLIP_CHILDREN_ONLY
+	panel_clip.visible = true
 	_catcher = catcher_center.get_child(0)
 	_catcher_initial_angle = _catcher.position.angle()
 	_catcher.obj_collected.connect(_on_catcher_obj_collected)
 	music.finished.connect(_on_music_finished)
 	_music_duration = music.stream.get_length()
-	
 	_entries = to_collect_container.get_children()
+	
+	progress_bar.hide()
 	
 	if _music_duration and not _to_be_spawned_ids.is_empty():
 		_spawn_interval = _music_duration / _to_be_spawned_ids.size()
@@ -45,16 +49,22 @@ func _ready() -> void:
 
 func _start() -> void:
 	if voice.stream:
-		voice.finished.connect(_start_spawn)
+		voice.finished.connect(restart)
 		_music_duration = voice.stream.get_length()
 	else:
 		await get_tree().create_timer(3.0).timeout
-		_start_spawn()
+		restart()
+
+
+func restart() -> void:
+	progress_bar.visible = _music_duration != 0.0
 	progress_bar.value = 0.0
+	points = 0
+	music.play()
+	_start_spawn()
 
 
 func _start_spawn() -> void:
-	points = 0
 	for entry: ToCollectEntry in _entries:
 		entry.reset_count()
 	
@@ -76,7 +86,8 @@ func _process(delta: float) -> void:
 	_process_catcher_rotation(delta)
 	if is_started:
 		_process_spawn(delta)
-		progress_bar.value = music.get_playback_position() / _music_duration
+		if _music_duration:
+			progress_bar.value = music.get_playback_position() / float(_music_duration)
 
 
 func _process_catcher_rotation(delta: float) -> void:
@@ -105,16 +116,17 @@ func _spawn_next() -> void:
 	
 	var new_obj: ArcadeObj = scene_pack.instantiate()
 	new_obj.idx = entry.idx
-	new_obj.position = catcher_center.global_position
 	new_obj.rotation = randf() * TAU
 	
-	add_child(new_obj)
+	panel_clip.add_child(new_obj)
+	new_obj.global_position = catcher_center.global_position
 
 
-func _popup_label(label_text: String, pos: Vector2) -> void:
+func _popup_label(label_text: String, pos: Vector2, col: Color) -> void:
 	if not label_text: return
 	var popup_label: PopupLabel = preload("uid://cl6d772vmnfmu").instantiate()
 	popup_label.text = label_text
+	popup_label.modulate_color = col
 	popup_label.position = pos
 	popup_label.rotation = randf_range(-0.1, 0.1) * PI/2.0
 	add_child(popup_label)
@@ -139,7 +151,8 @@ func _on_catcher_obj_collected(obj: ArcadeObj) -> void:
 	points += entry.points_given
 	
 	var points_text: String = "%d" % entry.points_given
-	_popup_label(points_text, obj.global_position)
+	var label_col: Color = Color(0.0, 0.773, 0.213, 1.0) if entry.points_given >= 0 else Color(0.839, 0.0, 0.114, 1.0)
+	_popup_label(points_text, obj.global_position, label_col)
 	_catcher.pulse(entry.good_to_collect)
 	obj.queue_free()
 

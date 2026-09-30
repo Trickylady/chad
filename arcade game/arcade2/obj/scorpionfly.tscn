@@ -33,3 +33,6 @@ frame_progress = 0.8314875
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=309422714]
 shape = SubResource("CircleShape2D_dacw8")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1077862224]
+rect = Rect2(-86, -86, 172, 172)

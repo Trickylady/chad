@@ -3,10 +3,11 @@ class_name PopupLabel
 
 var text: String
 var duration: float = 0.7 # seconds
-
+var modulate_color: Color
 
 func _ready() -> void:
 	$Label.text = text
+	$Label.modulate = modulate_color
 	$Label.modulate.a = 0.0
 	var tween: Tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)

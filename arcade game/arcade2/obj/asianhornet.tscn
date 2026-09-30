@@ -33,3 +33,6 @@ sprite_frames = SubResource("SpriteFrames_qxlbe")
 animation = &"asianhornetmove"
 autoplay = "asianhornetmove"
 frame_progress = 0.9696027
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1811454717]
+rect = Rect2(-86, -86, 172, 172)
